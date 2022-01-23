@@ -1,0 +1,39 @@
+:root {
+  --page-header-height: calc(var(--s4) - 4px + var(--s1));
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--page-header-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--color-border);
+  background-color: #fff;
+
+  .brand {
+    padding: var(--s1);
+  }
+
+  a {
+    display: inline-block;
+    padding: var(--s1);
+    text-decoration: none;
+  }
+
+  a.active {
+    background-color: var(--color-bg-alt2);
+  }
+}
+
+.main {
+  margin-top: var(--page-header-height);
+}
+
+html {
+  scroll-padding-top: calc(var(--page-header-height) + var(--s1));
+}

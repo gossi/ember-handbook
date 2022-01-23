@@ -1,0 +1,30 @@
+.value {
+  text-transform: capitalize;
+}
+
+.yes {
+  composes: value;
+  color: #080;
+}
+
+.no {
+  composes: value;
+  color: #800;
+}
+
+.optional {
+  composes: value;
+  color: #008;
+}
+
+.inline {
+  composes: optional;
+}
+
+.block {
+  composes: optional;
+}
+
+.both {
+  composes: optional;
+}

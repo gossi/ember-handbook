@@ -1,0 +1,14 @@
+<div local-class="page" class="page {{if this.menu 'page-has-menu'}}" itemscope itemtype="https://schema.org/WebPage">
+  <div>
+    {{#if (has-block-params)}}
+      {{yield (hash
+      Menu=(component 'page/menu' page=this)
+      Main=(component 'page/main')
+    )}}
+    {{else}}
+      <Page::Main>
+        {{yield}}
+      </Page::Main>
+    {{/if}}
+  </div>
+</div>

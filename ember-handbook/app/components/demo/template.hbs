@@ -1,0 +1,15 @@
+<div>
+  <div local-class="example">
+    {{#if @demo}}
+      <this.demo />
+    {{else}}
+      {{yield}}
+    {{/if}}
+  </div>
+
+  <div local-class="snippets">
+    {{#if this.source}}
+      <CodeSnippet @name={{this.source}} local-class="code" />
+    {{/if}}
+  </div>
+</div>

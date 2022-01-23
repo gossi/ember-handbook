@@ -1,0 +1,4 @@
+.chapter {
+  margin-top: var(--s1);
+  color: var(--color-heading);
+}

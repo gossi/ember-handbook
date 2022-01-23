@@ -1,0 +1,10 @@
+.type-table {
+  th {
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding-right: var(--s-1);
+  }
+}

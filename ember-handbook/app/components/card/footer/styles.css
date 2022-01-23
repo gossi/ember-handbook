@@ -1,0 +1,5 @@
+.card-footer {
+  border-top: 1px solid lightgrey;
+  background-color: #eee;
+  padding: var(--s-1);
+}

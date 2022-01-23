@@ -1,0 +1,59 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+*/
+
+/* @import url("https://fonts.googleapis.com/css2?family=Fira+Code&family=Playfair+Display:wght@700&family=Source+Sans+Pro&display=swap"); */
+main {
+  box-sizing: content-box;
+  margin: auto;
+}
+
+/* :target::before {
+  content: '';
+  display: block;
+  height: calc(var(--header-height) + var(--s1)); /* fixed header height*
+  margin: calc((var(--header-height) * -1) + (var(--s1) * -1)) 0 0; /* negative fixed header height *
+} */
+
+:root {
+  --color-primary: #2b6cde;
+  --color-text: #5c6277;
+  --color-heading: #17203d;
+  --color-bg-alternative: #f5f6fa;
+  --color-bg-alt2: #f8faff;
+  --color-border: #daddec;
+
+  --header-height: var(--s4);
+
+  color: var(--color-text);
+  font-family: "Satoshi", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-heading);
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 200;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: "Fira Code", monospace;
+}
+
+code {
+  font-size: 0.8em;
+}
+
+dt {
+  font-weight: bold;
+}

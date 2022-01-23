@@ -1,0 +1,18 @@
+.tabs [role="tablist"] {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-start;
+  padding: 0;
+  margin-bottom: 0;
+
+  [role="tab"] {
+    padding: var(--s-1);
+    cursor: pointer;
+    font-size: 0.8em;
+    border: 0;
+
+    &[aria-selected="true"] {
+      background-color: #f8f8f8;
+    }
+  }
+}

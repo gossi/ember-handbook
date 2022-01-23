@@ -1,0 +1,18 @@
+<div local-class="tabs">
+  <PortalTarget 
+    role="tablist" 
+    @name={{this.portal}} 
+    @multiple={{true}}
+    {{did-insert (set this "tablist")}}
+    {{on "click" this.activate}}
+    {{on "keyup" this.navigate}}
+  />
+
+  {{yield (hash
+    Tab=(component 'tabs/tab'
+      register=this.register
+      activeTab=this.activeTab
+      tablist=this.portal
+    )
+  )}}
+</div>

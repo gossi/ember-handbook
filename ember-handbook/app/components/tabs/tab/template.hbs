@@ -1,0 +1,23 @@
+{{did-insert (fn @register this)}}
+
+<Portal @target={{@tablist}}>
+  {{!-- template-lint-disable require-button-type --}}
+  <button
+    role="tab"
+    aria-controls={{this.id}}
+    aria-selected="{{if (eq @activeTab this) 'true' 'false'}}"
+    tabindex={{if (eq @activeTab this) 0 -1}}
+  >
+    {{@label}}
+  </button>
+</Portal>
+
+<section 
+  id={{this.id}}
+  role="tabpanel" 
+  hidden={{not-eq this @activeTab}} 
+  aria-labelledby="{{this.id}}-label" 
+  local-class="content"
+>
+  {{yield}}
+</section>

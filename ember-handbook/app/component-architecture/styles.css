@@ -1,0 +1,12 @@
+.page {
+  display: flex;
+
+  & > main {
+    width: 35rem;
+  }
+}
+
+.spacer {
+  display: block;
+  height: var(--s-1);
+}

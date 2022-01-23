@@ -1,0 +1,7 @@
+{
+  "workspaces": [
+    "ember-handbook",
+    "examples"
+  ],
+  "private": true
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ember-handbook</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {{content-for "head"}}
+
+    <link href="https://api.fontshare.com/css?f[]=satoshi@1&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ rootURL }}assets/vendor.css" />
+    <link
+      rel="stylesheet"
+      href="{{ rootURL }}assets/ember-handbook.css"
+    />
+
+    {{content-for "head-footer"}}
+  </head>
+  <body>
+    {{content-for "body"}}
+
+    <script src="{{ rootURL }}assets/vendor.js"></script>
+    <script src="{{ rootURL }}assets/ember-handbook.js"></script>
+
+    {{content-for "body-footer"}}
+  </body>
+</html>

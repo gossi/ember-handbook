@@ -1,0 +1,14 @@
+<header local-class="header">
+  <span local-class="brand">Ember Handbook</span>
+  <nav>
+    {{#let (link "component-architecture") as |link|}}
+      <a href={{link.url}} local-class={{if link.isActive "active" }} {{on "click" link.transitionTo}}>
+        Component Architecture
+      </a>
+    {{/let}}
+  </nav>
+</header>
+
+<div local-class="main">
+  {{outlet}}
+</div>

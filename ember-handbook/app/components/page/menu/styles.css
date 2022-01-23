@@ -1,0 +1,26 @@
+@media (min-width: 67rem) {
+  .menu {
+    background-color: var(--color-bg-alternative);
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    right: calc(50vw + (35rem / 2));
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0 !important;
+    padding-top: var(--s1);
+    border-right: 1px solid var(--color-border);
+    margin-right: var(--s1) !important;
+  }
+
+  .content {
+    margin-bottom: var(--s1);
+    padding-left: var(--s1);
+  }
+}
+
+.content {
+  max-width: 300px;
+  padding-right: var(--s1);
+}

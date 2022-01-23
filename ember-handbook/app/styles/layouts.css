@@ -1,0 +1,12 @@
+:global {
+  .stack {
+    --space: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .stack > * + * {
+    margin-top: var(--space);
+  }
+}

@@ -1,0 +1,11 @@
+<nav local-class="menu" {{did-insert this.setMenu}}>
+  <div local-class="content">
+    {{yield (hash
+      Title=(component 'page/menu/title')
+      Chapter=(component 'page/menu/chapter')
+      Section=(component 'page/menu/section')
+      Subsection=(component 'page/menu/subsection')
+      Divider=(component 'page/menu/divider')
+    )}}
+  </div>
+</nav>

@@ -1,0 +1,58 @@
+<Page as |p|>
+  <p.Menu as |m|>
+    <m.Title @route="component-architecture.index">
+      Component Architecture
+    </m.Title>
+
+    <m.Chapter @route="component-architecture.haptics">Haptics</m.Chapter>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.patterns">Patterns</m.Chapter>
+
+    <m.Section @route="component-architecture.patterns.factory">Factory</m.Section>
+    <m.Section @route="component-architecture.patterns.prototype">Prototype</m.Section>
+    <m.Section @route="component-architecture.patterns.builder">Builder</m.Section>
+
+    <span local-class="spacer"></span>
+
+    <m.Section @route="component-architecture.patterns.decorator">Decorator</m.Section>
+    <m.Section @route="component-architecture.patterns.proxy">Proxy</m.Section>
+    <m.Section @route="component-architecture.patterns.adapter">Adapter</m.Section>
+    <m.Section @route="component-architecture.patterns.composite">Composite</m.Section>
+
+    <span local-class="spacer"></span>
+
+    <m.Section @route="component-architecture.patterns.flyweight">Flyweight</m.Section>
+    <m.Section @route="component-architecture.patterns.strategy">Strategy</m.Section>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.types">Types</m.Chapter>
+    <m.Section @route="component-architecture.types.presentational">Presentational</m.Section>
+    <m.Section @route="component-architecture.types.container">Container</m.Section>
+    <m.Section @route="component-architecture.types.provider">Provider</m.Section>
+    <m.Section @route="component-architecture.types.contextual">Contextual</m.Section>
+    <m.Section @route="component-architecture.types.data-entry">
+      Data Entry
+    </m.Section>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.classification">Classification</m.Chapter>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.specialization">Specialization</m.Chapter>
+    <m.Section @route="component-architecture.specialization.inheritance">Inheritance</m.Section>
+    <m.Section @route="component-architecture.specialization.composition">Composition</m.Section>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.best-practices">Best Practices</m.Chapter>
+  </p.Menu>
+
+  <p.Main>
+    {{outlet}}
+  </p.Main>
+</Page>

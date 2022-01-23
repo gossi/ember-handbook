@@ -1,0 +1,11 @@
+<div local-class="card" ...attributes>
+  {{#if (has-block-params)}}
+    {{yield (hash
+      Header=(component 'card/header')
+      Body=(component 'card/body')
+      Footer=(component 'card/footer')
+    )}}
+  {{else}}
+    <Card::Body>{{yield}}</Card::Body>
+  {{/if}}
+</div>

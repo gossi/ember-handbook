@@ -1,0 +1,5 @@
+{{#let (concat @layout '-layout') as |Layout|}}
+  <Layout ...attributes as |l|>
+    {{yield l}}
+  </Layout>
+{{/let}}
