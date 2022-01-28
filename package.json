@@ -1,7 +1,8 @@
 {
   "workspaces": [
     "ember-handbook",
-    "examples"
+    "resources",
+    "slides-component-architecture"
   ],
   "private": true
 }

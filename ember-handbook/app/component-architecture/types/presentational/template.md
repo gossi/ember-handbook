@@ -5,7 +5,7 @@ type: tech
 
 ## Synopsis
 
-<TypeSynopsis @element="both" @logic="no" @styled="yes" @content="yes" @structure="no" @yields="no" />
+<Haptics @element="both" @logic="no" @styled="yes" @content="yes" @structure="no" @yields="no" />
 
 ## Principles
 
@@ -28,11 +28,11 @@ presents it in a circle with a border.
 
 <Tabs as |t|>
 <t.Tab @label="template.hbs">
-<CodeSnippet @name="components/avatar/template.hbs" />
+<CodeSnippet @name="components/examples/avatar/template.hbs" />
 </t.Tab>
 
 <t.Tab @label="styles.css">
-<CodeSnippet @name="components/avatar/styles.css" />
+<CodeSnippet @name="components/examples/avatar/styles.css" />
 </t.Tab>
 </Tabs>
 

@@ -5,7 +5,7 @@ type: tech
 
 ## Synopsis
 
-<TypeSynopsis @element="block" @logic="yes" @styled="no" @content="no" @structure="no"
+<Haptics @element="block" @logic="yes" @styled="no" @content="no" @structure="no"
 @yields="yes" />
 
 ## Principles
@@ -28,11 +28,11 @@ items and will provide them in a sorted fashion.
 
 <Tabs as |t|>
 <t.Tab @label="template.hbs">
-<CodeSnippet @name="components/data-manager/template.hbs" />
+<CodeSnippet @name="components/examples/data-manager/template.hbs" />
 </t.Tab>
 
 <t.Tab @label="component.ts">
-<CodeSnippet @name="components/data-manager/component.ts" />
+<CodeSnippet @name="components/examples/data-manager/component.ts" />
 </t.Tab>
 </Tabs>
 

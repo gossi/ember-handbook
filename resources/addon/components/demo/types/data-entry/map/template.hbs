@@ -1,0 +1,19 @@
+<LeafletMap
+  @lat={{50.1062719}}
+  @lng={{8.6729858}}
+  @zoom={{17.41}}
+  local-class="map"
+  as |layers|
+>
+  <layers.tile
+    @url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+  />
+
+  <layers.marker @location={{array 50.1062719 8.6729858}} as |marker|>
+    <marker.popup>
+      <strong>CLARK Headquarters</strong><br />
+      Wilhelm-Leuschner-Straße 17-19,<br />
+      60329 Frankfurt am Main
+    </marker.popup>
+  </layers.marker>
+</LeafletMap>

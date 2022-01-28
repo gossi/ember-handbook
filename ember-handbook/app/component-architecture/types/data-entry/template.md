@@ -7,14 +7,14 @@ Harvester & feeder are a nice tandem to enter and collect data in a declarative 
 
 ## Synopsis
 
-<TypeMatrix as |Item|>
+<Haptics::Matrix as |Item|>
 <Item @logic="yes" @styled="no" @content="optional" @structure="yes" @yields="yes" @element="block">
-Harvester
+Collector
 </Item>
 <Item @logic="no" @styled="no" @content="no" @structure="no" @yields="no" @element="inline">
-Feeder
+Entry
 </Item>
-</TypeMatrix>
+</Haptics::Matrix>
 
 ## Principles
 

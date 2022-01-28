@@ -1,0 +1,10 @@
+<Haptics::Matrix::Table>
+  <thead>
+    <Haptics::Matrix::Head>
+      <th>{{@title}}</th>
+    </Haptics::Matrix::Head>
+  </thead>
+  <tbody>
+    {{yield (component "haptics/matrix/item")}}
+  </tbody>
+</Haptics::Matrix::Table>

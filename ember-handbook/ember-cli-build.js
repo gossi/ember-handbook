@@ -22,7 +22,7 @@ skinparam rectangle {
 
 module.exports = function (defaults) {
   const app = new EmberApp(defaults, {
-    snippetPaths: ['app', 'snippets', 'packages/examples/addon'],
+    snippetPaths: ['app', 'snippets', '../resources/addon'],
     snippetSearchPaths: ['app'],
 
     // babel: {

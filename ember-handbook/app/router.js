@@ -14,7 +14,7 @@ Router.map(function () {
       this.route('presentational');
       this.route('container');
       this.route('provider');
-      this.route('contextual');
+      this.route('composable');
       this.route('data-entry');
     });
     this.route('patterns', function () {
