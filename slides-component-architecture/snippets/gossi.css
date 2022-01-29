@@ -1,0 +1,16 @@
+.gossi {
+  height: 162.5cm;
+  --beard-color: orange;
+
+  energy: 5000;
+  sillyness: 9000;
+
+  sport: 'Unicycle Freestyle';
+  edu: 'Dipl. Sport Scientist';
+
+  @media social and web {
+    github: gossi;
+    twitter: unistyler;
+    web: 'https://gos.si';
+  }
+}

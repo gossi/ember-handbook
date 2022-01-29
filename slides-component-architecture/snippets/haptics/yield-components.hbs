@@ -1,0 +1,21 @@
+<dialog open={{@open}}>
+  {{!...}}
+
+  <div>
+    {{yield (hash
+      close=@close
+      Body={{component "modal/body"}}
+    )}}
+  </div>
+
+  {{!...}}
+</dialog>
+
+{{! Usage }}
+<Modal as |modal|>
+  <modal.Body>
+    <button type="button" {{on "click" modal.close}}>
+      Close
+    </button>
+  </modal.Body>
+</Modal>

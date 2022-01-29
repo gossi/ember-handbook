@@ -1,0 +1,12 @@
+:global {
+  .cols {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  ul.list-unstyled {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}

@@ -1,0 +1,21 @@
+<dialog open={{@open}}>
+  {{#if (has-block "header")}}
+    <header>
+      {{yield @close to="header"}}
+    </header>
+  {{/if}}
+
+  <div>
+    {{#if (has-block "body")}}
+      {{yield @close to="body"}}
+    {{else if (has-block)}}
+      {{yield @close}}
+    {{/if}}
+  </div>
+
+  {{#if (has-block "footer")}}
+    <footer>
+      {{yield @close to="footer"}}
+    </footer>
+  {{/if}}
+</dialog>

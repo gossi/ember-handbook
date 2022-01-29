@@ -1,0 +1,19 @@
+{{! implicit default }}
+<Modal>
+  here goes the content
+</Modal>
+
+{{! explicit default }}
+<Modal>
+  <:default>here goes the content</:default>
+</Modal>
+
+{{! named block }}
+<Modal>
+  <:header>Delete Blog Post?</:header>
+  <:body>Do you want to delete the blog post?</:body>
+  <:footer>
+    <button type="button">Yes</button>
+    <button type="button">No</button>
+  </:footer>
+</Modal>
