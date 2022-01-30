@@ -1,0 +1,47 @@
+h1.title {
+  font-size: 150%;
+}
+
+.spec {
+  padding: 1%;
+  font-size: 60%;
+  text-align: left;
+  --r-heading-color: var(--r-background-color);
+  background-color: var(--r-main-color);
+  color: var(--r-background-color);
+  display: grid;
+  grid-template-areas:
+    'signature patterns haptics'
+    'signature patterns purpose'
+    'signature patterns classification';
+
+  h2 {
+    font-size: 130%;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.signature {
+  grid-area: signature;
+}
+
+.patterns {
+  grid-area: patterns;
+}
+
+.haptics {
+  grid-area: haptics;
+}
+
+.purpose {
+  grid-area: purpose;
+}
+
+.classification {
+  grid-area: classification;
+}

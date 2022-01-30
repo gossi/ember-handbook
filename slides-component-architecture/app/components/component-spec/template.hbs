@@ -1,0 +1,42 @@
+<h1 local-class="title">Component Spec Template</h1>
+<div local-class="spec" class="r-stretch">
+  {{#if (has-block "signature")}}
+    <div local-class="signature">
+      <h2>Signature</h2>
+
+      {{yield to="signature"}}
+    </div>
+  {{/if}}
+
+  {{#if (has-block "patterns")}}
+    <div local-class="patterns">
+      <h2>Patterns</h2>
+
+      {{yield to="patterns"}}
+    </div>
+  {{/if}}
+
+  {{#if (has-block "haptics")}}
+    <div local-class="haptics">
+      <h2>Haptics</h2>
+
+      {{yield to="haptics"}}
+    </div>
+  {{/if}}
+
+  {{#if (has-block "purpose")}}
+    <div local-class="purpose">
+      <h2>Purpose</h2>
+
+      {{yield to="purpose"}}
+    </div>
+  {{/if}}
+
+  {{#if (has-block "classification")}}
+    <div local-class="classification">
+      <h2>Classification</h2>
+
+      {{yield to="classification"}}
+    </div>
+  {{/if}}
+</div>
