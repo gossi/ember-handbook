@@ -1,7 +1,34 @@
 <section>
-  <h3 class="r-fit-text">Adapter Pattern</h3>
+  <span class="attribution">Gamma, E. et al. (1994, p. 139ff)</span>
+  <h3 class="r-fit-text">Adapter Component</h3>
+
+  <p>Convert the interface of one component to another. Connects incompatible
+    components.</p>
 </section>
 
 <section>
-  One component connects to another one, by transforming the args between the two components
+  <Code @name="patterns/adapter.hbs" />
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 140)</span>
+  <h4>Usage</h4>
+
+  <ul>
+    <li>Create an adapter component when two components do not match</li>
+    <li>Create an adapter that cooperates with unrelated or unforseeable
+      components, that do not necessarily be compatible</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Practical Examples</h4>
+
+  <ul>
+    <li>Migrating (legacy code)</li>
+    <li>Addon Authors:<br />
+      Create a new component, make the existing one deprecated and turn it into
+      an adapter
+    </li>
+  </ul>
 </section>

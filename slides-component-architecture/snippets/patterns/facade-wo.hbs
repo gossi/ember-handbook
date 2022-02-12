@@ -1,0 +1,13 @@
+{{! route: product/details.hbs }}
+
+<Product::Details::HeaderSection
+  @product={{@model}}
+  @overviewLink={{link "overview"}} 
+/>
+
+<Product::Details::SpecSection @product={{@model}}/>
+
+<Product::Details::PriceSection
+  @product={{@model}}
+  @offerLink={{link "offer"}} 
+/>

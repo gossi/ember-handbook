@@ -1,10 +1,40 @@
 <section>
-  <h3 class="r-fit-text">Facade Pattern</h3>
+  <span class="attribution">Gamma, E. et al. (1994, p. 185ff)</span>
+  <h3 class="r-fit-text">Facade Component</h3>
+
+  <p>"Provide a unified interface to a set of interfaces in a subsystem. Facade
+    defines a higher-level interface that makes the subsystem easier to use."
+    (Gamma, E. et al., 1994, p. 185)</p>
+
+  <blockquote>
+    Make a screen/page component for product details
+  </blockquote>
 </section>
 
 <section>
-  Screen Components,
+  <h4>Without Facade Pattern</h4>
 
-  provide _one_ interface from the route to the sections,
-  instead of the route to invoke each section directly
+  <Code @name="patterns/facade-wo.hbs" />
+</section>
+
+<section>
+  <h4>With Facade Pattern</h4>
+
+  <Code @name="patterns/facade.hbs" data-line-numbers="1-6|8-19" />
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 186)</span>
+  <h4>Usage</h4>
+
+  <ul>
+    <li class="fragment">Provide a simple interface to a complex subsystem</li>
+    <li class="fragment">Facade often acts as a "default view" that is mostly
+      "good enough"</li>
+    <li class="fragment">Decouple subsystem from clients/consumers and other
+      subsystems</li>
+    <li class="fragment">Promote subsystem independence and portability</li>
+    <li class="fragment">Facade as entry point to your subsystem (so you can
+      re-arrange behind that)</li>
+  </ul>
 </section>

@@ -1,12 +1,23 @@
+@import '../components/deck/-plugins/attribution/attribution';
+
 :global {
   .cols {
     display: grid;
     grid-auto-flow: column;
+    gap: 2%;
   }
 
   ul.list-unstyled {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+
+  li.list-unstyled {
+    list-style-type: none;
+  }
+
+  .t-nowrap {
+    white-space: nowrap;
   }
 }

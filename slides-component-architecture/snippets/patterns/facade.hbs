@@ -1,0 +1,19 @@
+{{! route: product/details.hbs }}
+<Product::DetailsScreen
+  @product={{@model}}
+  @overviewLink={{link "overview"}}
+  @offerLink={{link "offer"}}
+/>
+
+{{! components/product/details-screen.hbs }}
+<Product::DetailsScreen::HeaderSection 
+  @product={{@product}}
+  @overviewLink={{@overviewLinklink}} 
+/>
+
+<Product::DetailsScreen::SpecSection @product={{@product}} />
+
+<Product::DetailsScreen::PriceSection 
+  @product={{@product}}
+  @offerLink={{@offerLink}} 
+/>

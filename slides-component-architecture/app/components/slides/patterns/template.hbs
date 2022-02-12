@@ -1,49 +1,179 @@
 <TitleSlide @title="Patterns" @subtitle="How they work inside" />
 
 <section>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Creational</th>
-        <th>Structural</th>
-        <th>Behavioral</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <b>Abstract Factory</b><br>
-          <b>Factory Method</b><br>
-          <b>Builder</b><br>
-          <b>Prototype</b><br>
-          Singleton
-        </td>
-        <td>
-          <b>Adapter</b><br>
-          Bridge<br>
-          Composite<br>
-          <b>Decorator</b><br>
-          <b>Facade</b><br>
-          <b>Flyweight</b><br>
-          <b>Proxy</b>
-        </td>
-        <td>
-          Command<br>
-          Interpreter<br>
-          Mediator<br>
-          Memento<br>
-          Observer<br>
-          State<br>
-          Strategy<br>
-          Template Method<br>
-          Visitor
-        </td>
-      </tr>
-    </tbody>
-  </table>
+  <h1>Motivation</h1>
+  <div class="cols">
+    <div>
+      <blockquote class="fragment">
+        How to implement design patterns in a declarative form?
+      </blockquote>
+    </div>
+    <img
+      src="gof-design-patterns.jpg"
+      alt="Cover of the Book 'Design Patterns' by the 'Gang of Four'"
+    />
+  </div>
 </section>
 
 <section>
-  <Slides::Patterns::Facade />
+  <span class="attribution">Gamma, E., Helm, R., Johnson &amp; R. Vlissides, J.
+    (1994)</span>
+  <div class="cols">
+    <div>
+      <h3>Creational</h3>
+
+      <ul class="list-unstyled t-nowrap">
+        <li><b>Abstract Factory</b></li>
+        <li><b>Factory Method</b></li>
+        <li><b>Builder</b></li>
+        <li><b>Prototype</b></li>
+        <li>Singleton</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Structural</h3>
+
+      <ul class="list-unstyled">
+        <li><b>Adapter</b></li>
+        <li><b>Bridge</b></li>
+        <li>Composite</li>
+        <li><b>Decorator</b></li>
+        <li><b>Facade</b></li>
+        <li>Flyweight</li>
+        <li>Proxy</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>Behavioral</h3>
+
+      <ul class="list-unstyled">
+        <li><b>Command</b></li>
+        <li>Interpreter</li>
+        <li>Mediator</li>
+        <li>Memento</li>
+        <li>Observer</li>
+        <li>State</li>
+        <li><b>Strategy</b></li>
+        <li>Template Method</li>
+        <li>Visitor</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 81ff)</span>
+  <h1>Creational</h1>
+
+  <p><i>Abstract the instantiation process</i></p>
+  <ul>
+    <li>Make the system independent of how components are created</li>
+    <li>Class pattern: Uses inheritance to vary the class' instantiation</li>
+    <li>Creational Pattern: Delegate instantiation</li>
+    <li>Composition over Inheritance</li>
+  </ul>
+</section>
+
+<Slides::Patterns::Factory />
+
+<Slides::Patterns::Prototype />
+
+<Slides::Patterns::Builder />
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 136ff)</span>
+  <h1>Structural</h1>
+
+  <i>Concerned with how components are composed to form larger structures</i>
+</section>
+
+<Slides::Patterns::Decorator />
+
+<Slides::Patterns::Adapter />
+
+<Slides::Patterns::Bridge />
+
+<Slides::Patterns::Facade />
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 221)</span>
+  <h1>Behavioral</h1>
+
+  <i>Concerned with algorithms and the assignment of responsibilities</i>
+  <ul>
+    <li>Patterns of communication between behaviors</li>
+    <li>Characterize complex control flow that's difficult to follow at run-time</li>
+    <li>Shift focus from flow of control to how things are connected</li>
+  </ul>
+</section>
+
+<Slides::Patterns::Command />
+
+<Slides::Patterns::Strategy />
+
+<section>
+  <h1>Discussion</h1>
+
+  <ul>
+    <li class="fragment">Are you maybe already using a pattern without knowing?</li>
+    <li class="fragment">Better able to spot scope of a technique?</li>
+    <li class="fragment">Do you (dis)agree with <i>my</i> interpretation?</li>
+    <li class="fragment">Are my examples hitting the intention of design
+      patterns?</li>
+    <li class="fragment">Design patterns as tools?</li>
+  </ul>
+</section>
+
+<section>
+  <h1>Application</h1>
+
+  <ul>
+    <li class="fragment">Use them reactive - not proactive</li>
+    <li class="fragment">Do not use technical language (<code>@strategy</code>)
+      - use domain language</li>
+    <li class="fragment">Do they solve the problem you are facing or not?</li>
+    <li class="fragment">Use the right "tool"</li>
+  </ul>
+</section>
+
+<section>
+  <ComponentSpec>
+    <:signature>
+      <ul>
+        <li>Element</li>
+        <li>Arguments</li>
+        <li>Blocks</li>
+      </ul>
+    </:signature>
+
+    <:patterns>
+      <ul class="fragment">
+        <li class="title">Creational</li>
+        <li><input type="checkbox" /> Factory</li>
+        <li><input type="checkbox" /> Prototype</li>
+        <li><input type="checkbox" /> Builder</li>
+
+        <li class="title">Structural</li>
+        <li><input type="checkbox" /> Decorator</li>
+        <li><input type="checkbox" /> Adapter</li>
+        <li><input type="checkbox" /> Bridge</li>
+        <li><input type="checkbox" /> Facade</li>
+
+        <li class="title">Behavioral</li>
+        <li><input type="checkbox" /> Command</li>
+        <li><input type="checkbox" /> Strategy</li>
+      </ul>
+    </:patterns>
+
+    <:haptics>
+      <ul>
+        <li><input type="checkbox" /> Style</li>
+        <li><input type="checkbox" /> Content</li>
+        <li><input type="checkbox" /> Structure</li>
+      </ul>
+    </:haptics>
+  </ComponentSpec>
 </section>

@@ -1,0 +1,32 @@
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 233)</span>
+  <h3 class="r-fit-text">Command Pattern</h3>
+
+  <p>Enacpsulates a request/(trans)action</p>
+</section>
+
+<section>
+  <h4>Use <code>ember-command</code></h4>
+
+  <p><a
+      href="https://github.com/gossi/ember-command"
+      target="_blank"
+      rel="noopener noreferrer"
+    >github.com/gossi/ember-command</a></p>
+
+  <code>ember install ember-command</code>
+
+  <Code @name="patterns/command.ts" />
+</section>
+
+<section>
+  <h4>Usage</h4>
+
+  <ul>
+    <li class="fragment">Separate business logic from UI</li>
+    <li class="fragment">Your commands may have an undo operation</li>
+    <li class="fragment">Keep track of commands in a history (to support undo at
+      app state)</li>
+    <li class="fragment">Support transactions (a set of commands)</li>
+  </ul>
+</section>

@@ -1,8 +1,38 @@
 <section>
-  <h3 class="r-fit-text">Prototype Pattern</h3>
+  <span class="attribution">Gamma, E. et al. (1994, p. 117ff)</span>
+  <h3 class="r-fit-text">Prototype Component</h3>
+
+  <p>Specify the kind of component to create by
+    <i>copying/cloning</i>
+    their specific instance</p>
+
+  <blockquote class="fragment">
+    Build a profile for various Stormtroopers
+  </blockquote>
 </section>
 
 <section>
-  a shape component that takes x and y args and specific args for their cloned prototypes (rectangle and circle). See
-  example from refactoring guru
+  OOP
+  <Code
+    @name="patterns/prototype.ts"
+    data-line-numbers="1-11|13-22|16,18|24-29"
+  />
+</section>
+
+<section>
+  Template
+  <Code @name="patterns/prototype.hbs" data-line-numbers="3-8|10|14" />
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 118)</span>
+  <h4>Usage</h4>
+
+  <ul>
+    <li class="fragment">When components are specified at runtime</li>
+    <li class="fragment">Works best when there are only a
+      <i>few</i>
+      combinations available</li>
+    <li class="fragment">Avoid heavy use of factories</li>
+  </ul>
 </section>

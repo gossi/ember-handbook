@@ -1,0 +1,18 @@
+{{! components/product-card.hbs }}
+{{#let 
+  (or @variant (component "product-card/default")) 
+  as |Card|
+}}
+  <Card>
+    ...
+  </Card>
+{{/let}}
+
+{{! invocation }}
+<ProductCard
+  @product={{@model}}
+  @variant={{if
+    this.variantTreatment
+    (component "product-card-experiment/treatment")
+  }}
+/>

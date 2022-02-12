@@ -1,0 +1,7 @@
+{{! definition: components/control-factory.hbs }}
+{{#let (component (concat "control/" @type)) as |Control|}}
+  <Control />
+{{/let}}
+
+{{! invocation }}
+<ControlFactory @type="text" />

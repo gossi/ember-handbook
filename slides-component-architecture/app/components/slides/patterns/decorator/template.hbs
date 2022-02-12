@@ -1,7 +1,54 @@
 <section>
-  <h3 class="r-fit-text">Decorator Pattern</h3>
+  <span class="attribution">Gamma, E. et al. (1994, p. 175ff)</span>
+  <h3 class="r-fit-text">Decorator Component</h3>
+
+  <p>Attach additional responsibilities</p>
 </section>
 
 <section>
-  Take an existing component and apply custom styles
+  <h4>Custom Decorator</h4>
+  <blockquote>
+    Attach additional styling onto a specific component
+  </blockquote>
+
+  <Code @name="patterns/decorator-fancy-button.hbs" />
+
+  <ul class="fragment">
+    <li>It <i>adds</i> a decoration</li>
+    <li>Not reusable</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Reusable Decorator</h4>
+  <blockquote>
+    Attach a concept onto any component
+  </blockquote>
+
+  <Code @name="patterns/decorator-scrollable.hbs" />
+
+  <ul class="fragment">
+    <li>Agnostic concept</li>
+    <li>Cannot re-export named blocks</li>
+  </ul>
+</section>
+
+<section>
+  <span class="attribution">Haz, D. (2018)</span>
+  <h4>Usage</h4>
+
+  <ul class="list-unstyled">
+    <li class="fragment">⚠️ Reusable decorator components are fragile<br />
+      Advice: Better not use</li>
+    <li class="fragment">🎨 Stylish additions through your CSS architecture</li>
+    <li class="fragment">🎓 <b>Aware of adding a <i>decoration</i></b></li>
+    <li class="fragment">🏥 Custom decorations are great for maintainability</li>
+    <li class="fragment">➡️ "Singel" element pattern
+      <ul>
+        <li>Keep amount of elements to <i>one</i></li>
+        <li>Instead of one component with multiple arguments...<br />... a fleet
+          of components with almost no arguments</li>
+      </ul>
+    </li>
+  </ul>
 </section>

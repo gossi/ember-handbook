@@ -1,0 +1,57 @@
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 87ff)</span>
+  <h3 class="r-fit-text">Factory Component</h3>
+
+  <p>Creating families of related or dependent components without specifying
+    their concrete component</p>
+
+  <blockquote class="fragment">
+    A form built with fields from a backend
+  </blockquote>
+</section>
+
+<section>
+  <h4>OOP</h4>
+  <Code @name="patterns/factory.ts" />
+</section>
+
+<section>
+  <h4>Template</h4>
+  <Code @name="patterns/factory.hbs" />
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 88, 108)</span>
+  <h4>Usage</h4>
+  <ul>
+    <li class="fragment">When you can't anticipate the concrete component</li>
+    <li class="fragment">System to be independent of how its components are
+      created, composed and represented</li>
+    <li class="fragment">Constrain the use to a family of components</li>
+    <li class="fragment">Keep implementations private and only expose the public
+      creation</li>
+  </ul>
+</section>
+
+<section>
+  <h4>Caveats (early 2022)</h4>
+
+  <ul class="list-unstyled">
+    <li class="fragment">Classic:<br />
+      <code>&#123;&#123;component (concat "control/" @type)&#125;&#125;</code></li>
+    <li class="fragment">Embroider:
+      <a
+        href="https://github.com/embroider-build/embroider/blob/main/REPLACING-COMPONENT-HELPER.md"
+        target="_blank"
+        rel="noopener noreferrer"
+      ><code>REPLACING-COMPONENT-HELPER.md</code></a></li>
+    <li class="fragment">
+      Future:
+      <a
+        href="https://github.com/emberjs/rfcs/pull/779"
+        target="_blank"
+        rel="noopener noreferrer"
+      >RFC #779 (Component Imports)</a>
+    </li>
+  </ul>
+</section>

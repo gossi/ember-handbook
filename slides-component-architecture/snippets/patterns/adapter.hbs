@@ -1,0 +1,7 @@
+{{! components/button.hbs }}
+
+{{#if this.materialDesign}}
+  <PaperButton @onClick={{@push}}>{{yield}}</PaperButton>
+{{else if this.bootstrap}}
+  <BsButton @onClick={{@push}}>{{yield}}</BsButton>
+{{/if}}

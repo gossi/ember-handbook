@@ -1,0 +1,24 @@
+{{! components/modal.hbs }}
+
+{{#let
+  (if
+    this.mobile
+    (component "sheet")
+    (component "dialog")
+  )
+  as |Modal|
+}}
+  <Modal ...attributes>
+    <:header>
+      {{yield to="header"}}
+    </:header>
+
+    <:body>
+      {{yield to="body"}}
+    </:body>
+
+    <:footer>
+      {{yield to="footer"}}
+    </:footer>
+  </Modal>
+{{/if}}

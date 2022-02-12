@@ -1,0 +1,37 @@
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 185ff)</span>
+  <h3 class="r-fit-text">Strategy Pattern</h3>
+
+  <p>Define a family of algorithms, encapsulate each one and make them
+    interchangeable.</p>
+
+  <blockquote>
+    Product Card Variants
+  </blockquote>
+</section>
+
+<section>
+  <h4>Different UIs</h4>
+  <Code @name="patterns/strategy-variant.hbs" data-line-numbers="2-4|14-17" />
+</section>
+
+<section>
+  <span class="attribution">Montiel (2018)</span>
+  <h4>Functional Solution</h4>
+  <Code @name="patterns/strategy-fp.ts" />
+  <p class="fragment">a.k.a. High Order Functions</p>
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 316)</span>
+  <h4>Usage</h4>
+
+  <ul>
+    <li class="fragment">Use strategies to encapsulate behavior</li>
+    <li class="fragment">Use components as strategies to provide different looks</li>
+    <li class="fragment">Use components in combination with builder components
+      (optional)</li>
+    <li class="fragment">Realize behavior through other patterns (e.g. command)</li>
+    <li class="fragment">Avoid conditionals</li>
+  </ul>
+</section>

@@ -17,6 +17,8 @@ import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js';
 // @ts-ignore
 import Highlight from 'reveal.js/plugin/highlight/highlight.js';
 
+import RevealAttribution from './-plugins/attribution/plugin';
+
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface DeckArgs {}
 
@@ -30,7 +32,7 @@ export default class DeckComponent extends Component<DeckArgs> {
       hashOneBasedIndex: true,
 
       // plugins: [Markdown, RevealMenu, RevealChalkboard],
-      plugins: [Markdown, Highlight],
+      plugins: [Markdown, Highlight, RevealAttribution],
       menu: {
         path: '/reveal.js-menu',
         // Specifies which side of the presentation the menu will

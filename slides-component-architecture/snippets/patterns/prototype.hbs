@@ -1,0 +1,14 @@
+{{! definition: components/trooper-profile.hbs }}
+{{#let
+  (if
+    (eq @trooper.kind "tie-pilot")
+    (component "trooper-profile/tie-pilot")
+    (component "trooper-profile/storm-trooper")
+  )
+  as |Profile|
+}}
+  <Profile @trooper={{@trooper}} />
+{{/let}}
+
+{{! invocation }}
+<TrooperProfile @trooper={{this.trooper}} />

@@ -1,0 +1,33 @@
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 151ff)</span>
+  <h3 class="r-fit-text">Bridge Component</h3>
+
+  <p>"Decouple an abstraction from its implementation so that the two can vary
+    independently."</p>
+
+  <blockquote>
+    Let's make a modal that is different for desktop and mobile.
+  </blockquote>
+</section>
+
+<section>
+  <Code @name="patterns/bridge.hbs" data-line-numbers="|3-10|11-23" />
+
+  <p>Variations: Replace
+    <code>Modal</code>
+    with
+    <code>AlertModal</code>
+    or
+    <code>MutedModal</code></p>
+</section>
+
+<section>
+  <span class="attribution">Gamma, E. et al. (1994, p. 153)</span>
+  <h4>Usage</h4>
+
+  <ul>
+    <li>Avoid permanent binding between abstraction and implementation</li>
+    <li>When you want to hide implementation of an abstraction</li>
+    <li>For contextual implementations of an abstraction</li>
+  </ul>
+</section>
