@@ -4,5 +4,8 @@
     "resources",
     "slides-component-architecture"
   ],
+  "scripts": {
+    "build:website": "cd ember-handbook && yarn build"
+  },
   "private": true
 }
