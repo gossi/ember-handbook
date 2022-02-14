@@ -1,7 +1,11 @@
 <section>
   <div local-class="title-slide">
     <header>
-      Component
+      {{#if @eyebrow}}
+        {{@eyebrow}}
+      {{else}}
+        &nbsp;
+      {{/if}}
       <h1>{{@title}}</h1>
     </header>
     <p>{{@subtitle}}</p>
