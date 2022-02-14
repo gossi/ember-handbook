@@ -1,0 +1,14 @@
+table.type-table {
+  margin: unset;
+
+  th {
+    text-align: left;
+  }
+
+  th,
+  td {
+    padding: 0;
+    padding-right: var(--s-1, 1em);
+    border-bottom: 0;
+  }
+}

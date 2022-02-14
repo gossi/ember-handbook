@@ -1,0 +1,44 @@
+<h4 local-class="title">{{@title}} Spec</h4>
+<div local-class="spec" class="r-stretch">
+  <div local-class="main">
+    {{#if (has-block "synopsis")}}
+      <div local-class="synopsis">
+        <h2>Synopsis</h2>
+
+        {{yield to="synopsis"}}
+      </div>
+    {{/if}}
+
+    {{#if (has-block "principles")}}
+      <div local-class="principles">
+        <h2>Principles</h2>
+
+        {{yield to="principles"}}
+      </div>
+    {{/if}}
+
+    {{#if (has-block)}}
+      <div local-class="default">
+        {{yield}}
+      </div>
+    {{/if}}
+  </div>
+
+  <aside>
+    {{#if (has-block "aka")}}
+      <div local-class="aka">
+        <h2>Also Known As</h2>
+
+        {{yield to="aka"}}
+      </div>
+    {{/if}}
+
+    {{#if (has-block "patterns")}}
+      <div local-class="patterns">
+        <h2>Patterns</h2>
+
+        {{yield to="patterns"}}
+      </div>
+    {{/if}}
+  </aside>
+</div>

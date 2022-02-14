@@ -1,3 +1,55 @@
 <section>
-  Data Entry Component
+  <h3>Data Entry Component</h3>
+</section>
+
+<section>
+  <TypeSpec @title="Data Entry Component">
+    <:synopsis>
+      <Haptics::Matrix as |Item|>
+        <Item
+          @invocation="block"
+          @styled="yes"
+          @content="yes"
+          @structure="yes"
+          @logic="yes"
+        >
+          Collector
+        </Item>
+        <Item
+          @invocation="inline"
+          @styled="no"
+          @content="no"
+          @structure="no"
+          @logic="no"
+        >
+          Entry
+        </Item>
+      </Haptics::Matrix>
+    </:synopsis>
+
+    <:principles>
+      <ul>
+        <li>Collector acquires data</li>
+        <li>Collector yields entry components</li>
+        <li>Entry component for declarative data input</li>
+        <li>Collector can yield and/or display data</li>
+        <li>Data up instead of down</li>
+      </ul>
+    </:principles>
+  </TypeSpec>
+</section>
+
+<section>
+  <h4>Example: Map</h4>
+
+  <Code
+    @name="components/demo/types/data-entry/map/template.hbs"
+    data-line-numbers="1-7,19|8-10|12-18"
+  />
+</section>
+
+<section>
+  <h4>Demo: Map</h4>
+
+  <Demo::Types::DataEntry::Map />
 </section>

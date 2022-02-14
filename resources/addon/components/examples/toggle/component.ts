@@ -3,6 +3,16 @@ import { guidFor } from '@ember/object/internals';
 import Component from '@glimmer/component';
 import { Owner } from '@glimmer/di';
 import { tracked } from '@glimmer/tracking';
+import { ensureSafeComponent } from '@embroider/util';
+
+import LabelComponent from './label';
+import SwitchComponent from './switch';
+
+export interface ToggleLabelArgs {
+  for: string;
+  invoke: (value: boolean) => void;
+  value: boolean;
+}
 
 interface ToggleArgs {
   id?: string;
@@ -13,29 +23,38 @@ interface ToggleArgs {
   enabled?: boolean;
   change?: (value: boolean) => void;
 
-  labelComponent?: string;
-  switchComponent?: string;
+  labelComponent?: Component<ToggleLabelArgs>;
+  switchComponent?: Component;
 }
 
 export default class ToggleComponent extends Component<ToggleArgs> {
-  id: string;
-
   @tracked checked: boolean;
   enabled: boolean;
-
-  labelComponent: string;
-  switchComponent: string;
 
   constructor(owner: Owner, args: ToggleArgs) {
     super(owner, args);
 
     // set initial state
-    this.id = args.id || guidFor(this);
     this.enabled = args.enabled || true;
     this.checked = args.checked || false;
+  }
 
-    this.labelComponent = args.labelComponent || 'examples/toggle/label';
-    this.switchComponent = args.switchComponent || 'examples/toggle/switch';
+  get id(): string {
+    return this.args.id ?? guidFor(this);
+  }
+
+  get switchComponent() {
+    return ensureSafeComponent(
+      this.args.switchComponent ?? SwitchComponent,
+      this
+    );
+  }
+
+  get labelComponent() {
+    return ensureSafeComponent(
+      this.args.labelComponent ?? LabelComponent,
+      this
+    );
   }
 
   @action

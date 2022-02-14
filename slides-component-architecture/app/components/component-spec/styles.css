@@ -12,7 +12,7 @@ h1.title {
   display: grid;
   grid-template-areas:
     'signature patterns haptics'
-    'signature patterns purpose'
+    'signature patterns types'
     'signature patterns classification';
 
   h2 {
@@ -38,8 +38,8 @@ h1.title {
   grid-area: haptics;
 }
 
-.purpose {
-  grid-area: purpose;
+.types {
+  grid-area: types;
 }
 
 .classification {

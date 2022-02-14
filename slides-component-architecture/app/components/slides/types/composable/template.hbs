@@ -1,0 +1,163 @@
+<section>
+  <h3>Composable Component</h3>
+
+  <References class="references" as |l|>
+    <l.BlogPost
+      @title="Presentational and Container Components"
+      @year="2015"
+      @url="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+      as |r|
+    >
+      <r.Author @given="Dan" @family="Abramov" />
+    </l.BlogPost>
+
+    <l.BlogPost
+      @title="Mixins Are Dead. Long Live Composition"
+      @year="2015"
+      @url="https://medium.com/@dan_abramov/mixins-are-dead-long-live-higher-order-components-94a0d2f9e750"
+      as |r|
+    >
+      <r.Author @given="Dan" @family="Abramov" />
+    </l.BlogPost>
+
+    <l.Video
+      @title="Composable Components"
+      @year="2015"
+      @medium="Video File"
+      @series="EmberCamp London 2015"
+      @url="https://www.youtube.com/watch?v=6N4qsO22fmw"
+      as |r|
+    >
+      <r.Author @given="Miguel" @family="Camba" />
+    </l.Video>
+
+    <l.Video
+      @title="Higher Order Components"
+      @year="2017"
+      @medium="Video File"
+      @series="EmberConf 2017"
+      @url="https://www.youtube.com/watch?v=MpFudGJn2J0"
+      as |r|
+    >
+      <r.Author @given="Miguel" @family="Camba" />
+    </l.Video>
+
+    <l.Video
+      @title="Building Better Components"
+      @year="2019"
+      @medium="Video File"
+      @series="EmberConf 2019"
+      @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c"
+      as |r|
+    >
+      <r.Author @given="Dianne" @family="Eramo" />
+    </l.Video>
+
+    <l.BlogPost
+      @title="Higher-Order Components in Ember.js"
+      @year="2018"
+      @url="https://v4.chriskrycho.com/2018/higher-order-components-in-emberjs.html"
+      as |r|
+    >
+      <r.Author @given="Chris" @family="Krycho" />
+    </l.BlogPost>
+
+    <l.BlogPost
+      @title="Components patterns in Ember.js"
+      @year="2018"
+      @url="https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f"
+      as |r|
+    >
+      <r.Author @given="Maciej" @family="Kwaśniak" />
+    </l.BlogPost>
+  </References>
+</section>
+
+<section>
+  <TypeSpec @title="Composable Component">
+    <:synopsis>
+      <Haptics
+        @invocation="both"
+        @styled="optional"
+        @content="optional"
+        @structure="optional"
+        @logic="yes"
+      />
+    </:synopsis>
+
+    <:principles>
+      <ul>
+        <li>Are concerned with <i>how things are connected</i></li>
+        <li>May contain presentational and other container components</li>
+        <li>May act as a wrapper</li>
+        <li>Yields components to compose them your own way</li>
+      </ul>
+    </:principles>
+
+    <:default>
+      <h3 class="fragment">Some Usages</h3>
+
+      <ul>
+        <li class="fragment"><b>Composite</b>
+          (inline/block): Connects internal components together</li>
+        <li class="fragment"><b>Kit</b>
+          (block only): Yields a construction kit</li>
+        <li class="fragment"><b>Chameleon</b>:<br />
+          Inline (Composite) - sensible default<br />
+          Block (Kit) - customizer kit
+        </li>
+      </ul>
+    </:default>
+
+    <:aka>
+      High(er)-Order Components (hoc)<br />
+      Contextual Components
+    </:aka>
+
+    <:patterns>
+      <ul>
+        <li>Strategy Pattern</li>
+        <li>Builder Pattern</li>
+        <li>Facade Pattern</li>
+      </ul>
+    </:patterns>
+  </TypeSpec>
+</section>
+
+<section>
+  <h4>Example: Toggle Component</h4>
+
+  <Code @name="components/examples/toggle/template.hbs" />
+</section>
+
+<section>
+  <h4>Demo: Toggle Component</h4>
+
+  <p>Sensible default</p>
+
+  <SlideDemo @demo="types/composable/toggle/default" />
+</section>
+
+<section>
+  <h4>Demo: Toggle Component</h4>
+
+  <p>With block customizations</p>
+
+  <SlideDemo @demo="types/composable/toggle/block-customization" />
+</section>
+
+<section>
+  <h4>Demo: Toggle Component</h4>
+
+  <p>As Kit</p>
+
+  <SlideDemo @demo="types/composable/toggle/builder" />
+</section>
+
+<section>
+  <h4>Demo: Toggle Component</h4>
+
+  <p>Parametrized custom replacements</p>
+
+  <SlideDemo @demo="types/composable/toggle/parametrized" />
+</section>

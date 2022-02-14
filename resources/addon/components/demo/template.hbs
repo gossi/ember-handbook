@@ -1,5 +1,5 @@
-<div>
-  <div local-class="example">
+<div ...attributes>
+  <div local-class='example' part="example">
     {{#if @demo}}
       <this.demo />
     {{else}}
@@ -7,9 +7,11 @@
     {{/if}}
   </div>
 
-  <div local-class="snippets">
+  <div local-class='snippets' part="code">
     {{#if this.source}}
-      <CodeSnippet @name={{this.source}} local-class="code" />
+      {{#let (if @code @code (component 'code-snippet')) as |Code|}}
+        <Code @name={{this.source}} local-class='code' />
+      {{/let}}
     {{/if}}
   </div>
 </div>

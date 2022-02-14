@@ -13,64 +13,66 @@
   }}
 {{else if (has-block)}}
   {{#if @offLabel}}
-    {{#component
-      this.labelComponent
-      value=false
-      for=this.id
-      invoke=this.change
-    }}{{@offLabel}}{{/component}}
+    <this.labelComponent
+      @value={{false}}
+      @for={{this.id}}
+      @invoke={{this.change}}
+    >
+      {{@offLabel}}
+    </this.labelComponent>
   {{/if}}
 
-  {{component
-    this.switchComponent
-    checked=this.checked
-    invoke=this.change
-    enabled=this.enabled
-  }}
+  <this.switchComponent
+    @id={{this.id}}
+    @checked={{this.checked}}
+    @invoke={{this.change}}
+    @enabled={{this.enabled}}
+  />
 
-  {{#component this.labelComponent for=this.id invoke=this.change}}
+  <this.labelComponent @for={{this.id}} @invoke={{this.change}}>
     {{yield}}
-  {{/component}}
+  </this.labelComponent>
 
   {{#if @onLabel}}
-    {{#component
-      this.labelComponent
-      value=true
-      for=this.id
-      invoke=this.change
-    }}{{@onLabel}}{{/component}}
+    <this.labelComponent
+      @value={{true}}
+      @for={{this.id}}
+      @invoke={{this.change}}
+    >
+      {{@onLabel}}
+    </this.labelComponent>
   {{/if}}
 {{else}}
   {{#if @offLabel}}
-    {{#component
-      this.labelComponent
-      value=false
-      for=this.id
-      invoke=this.change
-    }}{{@offLabel}}{{/component}}
+    <this.labelComponent
+      @value={{false}}
+      @for={{this.id}}
+      @invoke={{this.change}}
+    >
+      {{@offLabel}}
+    </this.labelComponent>
   {{/if}}
 
-  <Examples::Toggle::Switch
-    id={{this.id}}
+  <this.switchComponent
+    @id={{this.id}}
     @checked={{this.checked}}
     @invoke={{this.change}}
     @enabled={{this.enabled}}
   />
 
   {{#if @label}}
-    {{#component
-      this.labelComponent
-      for=this.id
-      invoke=this.change
-    }}{{@label}}{{/component}}
+    <this.labelComponent @for={{this.id}} @invoke={{this.change}}>
+      {{@label}}
+    </this.labelComponent>
   {{/if}}
 
   {{#if @onLabel}}
-    {{#component
-      this.labelComponent
-      value=true
-      for=this.id
-      invoke=this.change
-    }}{{@onLabel}}{{/component}}
+    <this.labelComponent
+      @value={{true}}
+      @for={{this.id}}
+      @invoke={{this.change}}
+    >
+      {{@onLabel}}
+    </this.labelComponent>
   {{/if}}
 {{/if}}

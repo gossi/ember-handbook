@@ -1,0 +1,16 @@
+.demo {
+  [part='example'] {
+    border: 1px solid #282c34;
+    padding: 1em;
+  }
+
+  [part='code'] pre {
+    margin: 0;
+    width: 100%;
+  }
+
+  [part='code'] code {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

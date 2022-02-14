@@ -12,7 +12,7 @@ them together.
 Given that traits, there have been a few component types crystallized. The
 following table lists them and maps their characteristics to the explained traits.
 
-<TypeMatrix @title="Name" as |Item|>
+<Haptics::Matrix @title="Name" as |Item|>
 <Item @logic="no" @styled="yes" @content="yes" @structure="no" @yields="no" @element="both">
 <LinkTo @route="component-architecture.types.presentational">Presentational</LinkTo>
 </Item>
@@ -24,7 +24,7 @@ following table lists them and maps their characteristics to the explained trait
 </Item>
 
 <Item @logic="yes" @styled="optional" @content="optional" @structure="optional" @yields="optional" @element="both">
-<LinkTo @route="component-architecture.types.contextual">Contextual</LinkTo>
+<LinkTo @route="component-architecture.types.composable">Composable</LinkTo>
 </Item>
 
 <Item @logic="yes" @styled="yes" @content="yes" @structure="yes" @yields="no" @element="inline">
@@ -37,7 +37,7 @@ Functional Unit
 <Item @logic="no" @styled="no" @content="no" @structure="no" @yields="no" @element="inline">
 &amp; <LinkTo @route="component-architecture.types.data-entry">Feeder</LinkTo>
 </Item>
-</TypeMatrix>
+</Haptics::Matrix>
 
 ## References
 

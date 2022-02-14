@@ -1,3 +1,81 @@
 <section>
-  Presentational Component
+  <h3>Presentational Component</h3>
+
+  <References class="references" as |l|>
+    <l.BlogPost
+      @title="Presentational and Container Components"
+      @year="2015"
+      @url="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+      as |r|
+    >
+      <r.Author @given="Dan" @family="Abramov" />
+    </l.BlogPost>
+
+    <l.Video
+      @title="Building Better Components"
+      @year="2019"
+      @medium="Video File"
+      @series="EmberConf 2019"
+      @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c"
+      as |r|
+    >
+      <r.Author @given="Dianne" @family="Eramo" />
+    </l.Video>
+
+    <l.BlogPost
+      @title="Introducing the Single Element Pattern"
+      @year="2018"
+      @url="https://www.freecodecamp.org/news/introducing-the-single-element-pattern-dfbd2c295c5d/"
+      as |r|
+    >
+      <r.Author @given="Diego" @family="Haz" />
+    </l.BlogPost>
+
+    <l.BlogPost
+      @title="Components patterns in Ember.js"
+      @year="2018"
+      @url="https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f"
+      as |r|
+    >
+      <r.Author @given="Maciej" @family="Kwaśniak" />
+    </l.BlogPost>
+  </References>
+</section>
+
+<section>
+  <TypeSpec @title="Presentational Component">
+    <:synopsis>
+      <Haptics
+        @invocation="both"
+        @styled="yes"
+        @content="yes"
+        @structure="no"
+        @logic="no"
+      />
+    </:synopsis>
+
+    <:principles>
+      <ul>
+        <li>Are concerned with <i>how things look</i></li>
+        <li>Are isolated, have no dependencies to the rest of the app</li>
+        <li>Aren't responsible for data loading or mutating</li>
+        <li>Receive data and callbacks exclusively via arguments</li>
+        <li>Rarely have their own state - can only be UI state</li>
+        <li>Render as minimal elements as possible</li>
+      </ul>
+    </:principles>
+  </TypeSpec>
+</section>
+
+<section>
+  <h4>Example: Avatar Component</h4>
+
+  <Code @name="components/examples/avatar/template.hbs" />
+  <Code @name="components/examples/avatar/styles.css" />
+</section>
+
+<section>
+  <h4>Demo: Avatar Component</h4>
+
+  <SlideDemo @demo="types/presentational/avatar" />
 </section>

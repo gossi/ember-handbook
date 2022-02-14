@@ -1,3 +1,75 @@
 <section>
-  Provider Component
+  <h3>Provider Component</h3>
+
+  <References class="references" as |l|>
+    <l.Video
+      @title="Building Better Components"
+      @year="2019"
+      @medium="Video File"
+      @series="EmberConf 2019"
+      @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c"
+      as |r|
+    >
+      <r.Author @given="Dianne" @family="Eramo" />
+    </l.Video>
+
+    <l.Video
+      @title="Making your app fast with high-performance components"
+      @year="2015"
+      @medium="Video File"
+      @series="React.js Conf 2015"
+      @url="https://www.youtube.com/watch?v=KYzlpRvWZ6c&t=1351s"
+      as |r|
+    >
+      <r.Author @given="Jason" @family="Bonta" />
+    </l.Video>
+
+    {{! template-lint-disable no-potential-path-strings }}
+    <l.Video
+      @title="Design Considerations for a Modern Data Table"
+      @year="2017"
+      @medium="Video File"
+      @series="@Ember SF"
+      @url="https://www.youtube.com/watch?v=M6MHWgHjoJs"
+      as |r|
+    >
+      <r.Author @given="Devendra" @family="Desai" />
+    </l.Video>
+  </References>
+</section>
+
+<section>
+  <TypeSpec @title="Provider Component">
+    <:synopsis>
+      <Haptics
+        @invocation="block"
+        @styled="no"
+        @content="no"
+        @structure="no"
+        @logic="yes"
+      />
+    </:synopsis>
+
+    <:principles>
+      <ul>
+        <li><b>Only</b> concerned with <i>how things work</i></li>
+        <li>Cointains logic</li>
+        <li>Renderless</li>
+        <li>Yield data and functions for further interaction</li>
+      </ul>
+    </:principles>
+  </TypeSpec>
+</section>
+
+<section>
+  <h4>Example: Data Manager</h4>
+
+  <Code @name="components/examples/data-manager/template.hbs" />
+  <Code @name="components/examples/data-manager/component.ts" />
+</section>
+
+<section>
+  <h4>Demo: Data Manager</h4>
+
+  <SlideDemo @demo="types/provider/fruits" />
 </section>
