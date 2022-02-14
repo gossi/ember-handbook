@@ -1,5 +1,162 @@
-<TitleSlide @title="Classification" @subtitle="The scope of them" />
+<TitleSlide @title="Classification" @subtitle="The home of a component" />
 
 <section>
-  X and Y axis of atomic design and ds-recipes-snowflakes (by Brad Frost)
+  <h2>Definition</h2>
+
+  <p><strong>Classification</strong>
+    gives components a
+    <i>home</i>
+    and can be accompanied by naming conventions or guides.</p>
+</section>
+
+<section>
+  <span class="attribution">Frost, B. (2013)</span>
+
+  <h3>Atomic Design</h3>
+
+  <img
+    src="atomic-design.png"
+    alt="Atoms, Molecules, Organisms, Templates and Pages that make up Atomic Design"
+  />
+</section>
+
+<section>
+  <span class="attribution">Frost, B. (2021)</span>
+
+  <h3>Layered System</h3>
+
+  <img
+    class="r-stretch"
+    src="component-pyramid.png"
+    alt="Design System, Recipes and Snowflakes as a layered system"
+  />
+</section>
+
+<section>
+  <h3>Classification</h3>
+
+  <div class="r-stack">
+    <img src="classification-grid.png" />
+    <img src="classification.png" class="fragment" />
+  </div>
+</section>
+
+<section>
+  <h3>Usage</h3>
+
+  <ul>
+    <li class="fragment">Atomic Design by Brad Frost serves as an explainer</li>
+    <li class="fragment">Needs to fit to your architecture</li>
+    <li class="fragment">Draw zones to make boundaries and name the areas</li>
+    <li class="fragment">Set rules/guides for each area</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Example: Hokulea</h3>
+
+  <p>My research design system</p>
+
+  <ul>
+    <li>Github:
+      <a
+        href="https://github.com/hokulea/hokulea"
+        target="_blank"
+        rel="noopener noreferrer"
+      >hokulea/hokulea</a></li>
+    <li>Storybook:
+      <a
+        href="https://hokulea.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >hokulea.netlify.app</a></li>
+  </ul>
+</section>
+
+<section>
+  <h3>Hokulea: Classification</h3>
+
+  <img src="hokulea-classification.png" />
+</section>
+
+<section>
+  <h3>Hokulea: Periodic System of Components</h3>
+
+  <img src="hokulea-periodic-system-of-components.png" class="r-stretch" />
+</section>
+
+<section>
+  <h3>Hokulea: Primitives</h3>
+
+  <img src="hokulea-primitives.png" />
+</section>
+
+<section>
+  <h3>Hokulea: Containers</h3>
+
+  <img src="hokulea-containers.png" />
+</section>
+
+<section>
+  <h3>Discussion</h3>
+
+  <ul>
+    <li>Classification is a map for your components</li>
+    <li>Contains of areas for your components</li>
+    <li>Makes boundaries visible</li>
+    <li>Shall provide rules/guides for each area</li>
+  </ul>
+</section>
+
+<section>
+  <ComponentSpec>
+    <:signature>
+      <ul>
+        <li>Element</li>
+        <li>Arguments</li>
+        <li>Blocks</li>
+      </ul>
+    </:signature>
+
+    <:patterns>
+      <ul>
+        <li class="title">Creational</li>
+        <li><input type="checkbox" /> Factory</li>
+        <li><input type="checkbox" /> Prototype</li>
+        <li><input type="checkbox" /> Builder</li>
+
+        <li class="title">Structural</li>
+        <li><input type="checkbox" /> Decorator</li>
+        <li><input type="checkbox" /> Adapter</li>
+        <li><input type="checkbox" /> Bridge</li>
+        <li><input type="checkbox" /> Facade</li>
+
+        <li class="title">Behavioral</li>
+        <li><input type="checkbox" /> Command</li>
+        <li><input type="checkbox" /> Strategy</li>
+      </ul>
+    </:patterns>
+
+    <:haptics>
+      <ul>
+        <li><input type="checkbox" /> Style</li>
+        <li><input type="checkbox" /> Content</li>
+        <li><input type="checkbox" /> Structure</li>
+      </ul>
+    </:haptics>
+
+    <:types>
+      <ul>
+        <li><input type="radio" name="type" /> Presentational</li>
+        <li><input type="radio" name="type" /> Container</li>
+        <li><input type="radio" name="type" /> Provider</li>
+        <li><input type="radio" name="type" /> Composable</li>
+        <li><input type="radio" name="type" /> Data Entry</li>
+      </ul>
+    </:types>
+
+    <:classification>
+      <p class="fragment">Your Map</p>
+    </:classification>
+  </ComponentSpec>
 </section>
