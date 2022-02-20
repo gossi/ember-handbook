@@ -5,6 +5,10 @@
     display: grid;
     grid-auto-flow: column;
     gap: 2%;
+
+    &[data-cols='2'] {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   ul.list-unstyled {
