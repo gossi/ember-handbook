@@ -1,0 +1,13 @@
+.delete-blog-post-modal {
+  [part='header'] {
+    color: red;
+  }
+
+  [part='body'] {
+    color: lightgrey;
+  }
+
+  [part='footer'] {
+    justify-content: space-between;
+  }
+}

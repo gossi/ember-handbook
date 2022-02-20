@@ -1,0 +1,4 @@
+.button {
+  --button-background-color: blue;
+  background-color: var(--button-background-color);
+}

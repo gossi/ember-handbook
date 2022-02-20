@@ -1,0 +1,25 @@
+.flow {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & > * + * {
+    margin-block-start: var(--flow-space, 1.5rem);
+  }
+
+  [data-flow-end] {
+    margin-block-start: auto;
+  }
+}
+
+.flow-demo {
+  composes: flow;
+  border: 1px solid white;
+  padding: 1em;
+  --flow-space: 1em;
+
+  & > * {
+    border: 1px solid white;
+    padding: 0.5em;
+  }
+}

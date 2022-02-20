@@ -33,4 +33,8 @@
       margin-bottom: var(--s-4);
     }
   }
+
+  .reveal li blockquote {
+    width: 90%;
+  }
 }

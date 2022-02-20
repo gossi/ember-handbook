@@ -1,0 +1,425 @@
+<ComponentTitleSlide @title="Styling" @subtitle="How to paint them" />
+
+<section>
+  Bob + Greta Placeholder
+</section>
+
+<section>
+  <span class="attribution">Verou, L. (2021)</span>
+  <h2>Definition</h2>
+
+  Formalize a CSS API that exposes various parameters to customize the
+  appereance.
+</section>
+
+<section>
+  <span class="attribution">Nyman R., Jägenstedt P. (2021)<br />
+    Van Damme, B. (2021, 2022)<br />
+    Kravets, U. (2021)</span>
+  <h3>State of CSS</h3>
+
+  <ul>
+    <li class="fragment">#compat2021 (<code>flexbox</code>,
+      <code>grid</code>,
+      <code>position: sticky</code>,
+      <code>aspect-ratio</code>,
+      <code>transforms</code>)</li>
+    <li class="fragment">#interop2022 (layers, containment, color, subgrid,
+      <code>&lt;dialog&gt;</code>, ...)</li>
+    <li class="fragment">Biophilic Webdesign / New Responsive</li>
+  </ul>
+  <br /><br />
+
+  <h4 class="fragment">How we use CSS (in Ember)?</h4>
+
+  <p class="fragment">Responsive Webdesign (from 2010)</p>
+</section>
+
+<section>
+  <h3>Component CSS API</h3>
+
+  <p>Parametrize a Component with...</p>
+
+  <ul>
+    <li>Values</li>
+    <li>Modes</li>
+    <li>Parts</li>
+  </ul>
+</section>
+
+<section>
+  <span class="attribution">Verou, L. (2021); Bell, A. (2018, 2020b)</span>
+  <h2>Values</h2>
+
+  <p>Customize a default value with your own</p>
+
+  <Code @name="styling/values-naive-button.css" class="fragment" />
+  <Code @name="styling/values-naive-button.hbs" class="fragment" />
+  <Code @name="styling/values-naive-customize.css" class="fragment" />
+</section>
+
+<section>
+  <span class="attribution">Verou, L. (2021)</span>
+  <h3>Problems</h3>
+
+  <ul>
+    <li class="fragment">It is somewhat generally accepted, that all CSS belongs
+      to everybody</li>
+    <li class="fragment">Rules and their values are
+      <i>internal</i>
+      to their component</li>
+    <li class="fragment">Processings of values is much likely possible (<code
+      >calc()</code>,
+      <code>color()</code>)</li>
+  </ul>
+
+  <h3 class="fragment">Solution</h3>
+
+  <p class="fragment">Provide a stable API for passing in values from the
+    outside, using CSS custom properties</p>
+
+</section>
+
+<section>
+  <span class="attribution">Verou, L. (2021)</span>
+  <h3>Button Example (reworked)</h3>
+
+  <Code @name="styling/values-unstable-button.css" class="fragment" />
+  <Code @name="styling/values-unstable-button.hbs" class="fragment" />
+  <Code @name="styling/values-unstable-customize.css" class="fragment" />
+</section>
+
+<section>
+  <span class="attribution">Verou, L. (2021)</span>
+  <h3>So, we are good?</h3>
+
+  <Code @name="styling/values-unstable-buttons.hbs" class="fragment" />
+
+  <p class="fragment">The C in CSS stands for ...</p>
+</section>
+
+<section>
+  <span class="attribution">Verou, L. (2021)</span>
+  <h3>Button Example (stable)</h3>
+
+  <Code @name="styling/values-stable-button.css" />
+</section>
+
+<section>
+  <h2>Modes</h2>
+
+  <p>An opt-in to modify the ruleset or values.</p>
+</section>
+
+<section>
+  <h3>Example</h3>
+
+  <Code @name="styling/modes-example.hbs" />
+</section>
+
+<section>
+  <h3>Explanation</h3>
+
+  <ol>
+    <li class="fragment"><b>BEM</b>: Modifier
+      <blockquote>
+        <p>A flag on a block or element. Use them to change appearance or
+          behavior.</p>
+
+        <cite>Strukchinsky, V. & Starkov, V. (n.d.)</cite>
+      </blockquote>
+    </li>
+
+    <li class="fragment"><b>CUBE</b>: Exception
+      <blockquote>
+        <p>An exception is a deviation from the rules outlined in a block.</p>
+
+        <cite>Bell, A. (n.d.)</cite>
+      </blockquote>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <span class="attribution">
+    Diggs, J., Nurthen, J. &amp; Cooper, M. (2021)<br />
+    Raskin, J. (2008, p. 55ff)</span>
+  <h3>Opt-in Modalities</h3>
+
+  <div class="cols">
+    <div><h4>Defined Modalities</h4>
+
+      <ul>
+        <li class="fragment">pseudo classes (<code>:hover</code>,
+          <code>:active</code>) for quasimodes</li>
+        <li class="fragment"><code>aria-*</code></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Undefined Modalities</h4>
+
+      <ul>
+        <li class="fragment"><code>data-*</code></li>
+        <li class="fragment"><code>class</code></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Undefined Modalities</h3>
+
+  <div class="cols">
+    <div>
+      <h4><code>data-*</code></h4>
+
+      <ul>
+        <li class="fragment"><b>dynamic</b> description</li>
+        <li class="fragment">Behavior and appearance as information (your own
+          DSL)</li>
+      </ul>
+    </div>
+    <div>
+      <h4><code>class</code></h4>
+
+      <ul>
+        <li class="fragment"><b>static</b> description</li>
+        <li class="fragment">Design for the block/element</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <Code @name="styling/modes-button.hbs" data-line-numbers="4-5|" />
+  <Code @name="styling/modes-button.css" class="fragment" />
+</section>
+
+<section>
+  <h3>Usage</h3>
+
+  Works for components AND utilities
+</section>
+
+<section>
+  <span class="attribution">Bell, A. &amp; Pickering, H. (2021); Bell, A. (2018,
+    2020b)</span>
+
+  <h3>Flow Utility</h3>
+
+  <Code @name="styling/modes-flow.css" />
+</section>
+
+<section>
+  <h3>Flow Utility</h3>
+
+  <div class="cols r-stretch">
+    <div local-class="flow-demo">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <div local-class="flow-demo">
+      <div></div>
+      <div></div>
+      <div data-flow-end></div>
+      <div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h3>Card Builder (HTML + CSS)</h3>
+
+  <Code
+    @name="styling/modes-card-builder-in-html.hbs"
+    data-line-numbers="|3-4"
+  />
+
+  <p class="fragment">"Problem": Block/Element specification is split in HTML
+    and CSS</p>
+  <p class="fragment">Where are you defining your styling?</p>
+</section>
+
+<section>
+  <h3>Card Builder (CSS)</h3>
+
+  <Code @name="styling/modes-card-builder-in-css.hbs" data-line-numbers="3" />
+  <Code @name="styling/modes-card-builder-in-css.css" class="fragment" />
+</section>
+
+<section>
+  <h3>Example: Using Card Builder</h3>
+
+  <Code @name="styling/modes-card-builder-usage.hbs" />
+</section>
+
+<section>
+  <span class="attribution">Larroche (n.d.)</span>
+  <h3>Example: Loading spinner?</h3>
+
+  <Code @name="styling/modes-button-spinner-no.hbs" class="fragment" />
+  <Code @name="styling/modes-button-spinner-yes.hbs" class="fragment" />
+
+  <p class="fragment">Example taken from
+    <a
+      href="https://picocss.com/docs/loading.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >pico.css</a></p>
+</section>
+
+<section>
+  <h3>Modes Summary</h3>
+
+  <ul>
+    <li class="fragment">Opt-in to change behavior and appearance</li>
+    <li class="fragment">Modalities for opt-in (static vs. dynamic, informative
+      vs. descriptive)</li>
+    <li class="fragment">Have an opt-in API</li>
+    <li class="fragment">Works with components and utilities</li>
+    <li class="fragment">Components may mix-in utilities</li>
+    <li class="fragment">Have a huge impact on your CSS architecture</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Parts</h2>
+
+  <p>Define access to internal elements</p>
+
+  <small>a.k.a. "Named Blocks and how to style them"</small>
+</section>
+
+<section>
+  <h3>Problem</h3>
+
+  <Code @name="styling/parts-problem.hbs" />
+  <p class="fragment">Problem: Using HTML/JS to solve a CSS/styling issue</p>
+</section>
+
+<section>
+  <h3>Modalities</h3>
+
+  <ul>
+    <li class="fragment">generic pseudo-elements (<code>::before</code>,
+      <code>::after</code>, ...)</li>
+    <li class="fragment">element specific pseudo-elements (<code
+      >::backdrop</code>,
+      <code>::--moz-progress-bar</code>,
+      <code>::--webkit-progress-value</code>, ...)</li>
+    <li class="fragment"><code>role</code></li>
+    <li class="fragment"><code>part</code></li>
+  </ul>
+</section>
+
+<section>
+  <h3>Defining Parts</h3>
+
+  <Code @name="styling/parts-define-modal.hbs" data-line-numbers="|3,7,11" />
+</section>
+
+<section>
+  <h3>Using Parts</h3>
+
+  <Code @name="styling/parts-use-modal.hbs" />
+</section>
+
+<section>
+  <h3>Styling Parts</h3>
+
+  <Code @name="styling/parts-delete-blog-post-modal.css" />
+</section>
+
+<section>
+  <h2>Discussion</h2>
+
+  <ul>
+    <li class="fragment">Solving styling issues purely in CSS is challenging</li>
+    <li class="fragment">You can make APIs in CSS :)</li>
+    <li class="fragment"><b>Values</b>,
+      <b>Modes</b>
+      and
+      <b>Parts</b>
+      to be added to your CSS APIs</li>
+    <li class="fragment">CSS architecture to document used strategies</li>
+  </ul>
+
+  <p class="fragment">How to Document this?</p>
+</section>
+
+<section>
+  <h3>Documentation</h3>
+
+  <div class="r-stretch">
+    {{! template-lint-disable no-inline-styles }}
+    <img
+      src="shoelace.png"
+      alt="Customer Properties and parts documented for progress ring"
+      style="max-height: 80%"
+    />
+    <a
+      href="https://shoelace.style/components/progress-ring?id=css-custom-properties"
+    ><code>shoelace</code>: Progress Ring</a>
+  </div>
+</section>
+
+<section>
+  <ComponentSpec>
+    <:signature>
+      <ul>
+        <li>Element</li>
+        <li>Arguments</li>
+        <li>Blocks</li>
+
+        <li class="fragment" data-fragment-index="1"><br />CSS Values</li>
+        <li class="fragment" data-fragment-index="1">CSS Modes</li>
+        <li class="fragment" data-fragment-index="1">CSS Parts</li>
+      </ul>
+    </:signature>
+
+    <:patterns>
+      <ul>
+        <li class="title">Creational</li>
+        <li><input type="checkbox" /> Factory</li>
+        <li><input type="checkbox" /> Prototype</li>
+        <li><input type="checkbox" /> Builder</li>
+
+        <li class="title">Structural</li>
+        <li><input type="checkbox" /> Decorator</li>
+        <li><input type="checkbox" /> Adapter</li>
+        <li><input type="checkbox" /> Bridge</li>
+        <li><input type="checkbox" /> Facade</li>
+
+        <li class="title">Behavioral</li>
+        <li><input type="checkbox" /> Command</li>
+        <li><input type="checkbox" /> Strategy</li>
+      </ul>
+    </:patterns>
+
+    <:haptics>
+      <ul>
+        <li><input type="checkbox" /> Style</li>
+        <li><input type="checkbox" /> Content</li>
+        <li><input type="checkbox" /> Structure</li>
+      </ul>
+    </:haptics>
+
+    <:types>
+      <ul>
+        <li><input type="radio" name="type" /> Presentational</li>
+        <li><input type="radio" name="type" /> Container</li>
+        <li><input type="radio" name="type" /> Provider</li>
+        <li><input type="radio" name="type" /> Composable</li>
+        <li><input type="radio" name="type" /> Data Entry</li>
+      </ul>
+    </:types>
+
+    <:classification>
+      <p>Your Map</p>
+    </:classification>
+  </ComponentSpec>
+</section>

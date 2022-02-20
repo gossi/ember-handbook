@@ -1,0 +1,6 @@
+@value flow from 'layouts/flow';
+
+.card {
+  composes: flow;
+  /* ... */
+}

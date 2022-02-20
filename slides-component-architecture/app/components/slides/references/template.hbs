@@ -20,6 +20,54 @@
       <r.Author @given="Dan" @family="Abramov" />
     </l.BlogPost>
 
+    <l.Book
+      @chapter="The Stack"
+      @title="Every Layout"
+      @edition="2nd edition"
+      @year="2021"
+      as |r|
+    >
+      <r.Author @given="Andy" @family="Bell" />
+      <r.Author @given="Heydon" @family="Pickering" />
+    </l.Book>
+
+    <l.BlogPost
+      @title="CUBE CSS"
+      @year="2020"
+      @month="5"
+      @day="26"
+      @url="https://piccalil.li/blog/cube-css/"
+      as |r|
+    >
+      <r.Author @given="Andy" @family="Bell" />
+    </l.BlogPost>
+
+    <l.WebPage
+      @title="Flow CSS Utility"
+      @year="2020"
+      @month="11"
+      @day="3"
+      @url="https://piccalil.li/quick-tip/flow-utility/"
+      as |r|
+    >
+      <r.Author @given="Andy" @family="Bell" />
+    </l.WebPage>
+
+    <l.WebPage @title="Exception" @url="https://cube.fyi/exception.html" as |r|>
+      <r.Author @given="Andy" @family="Bell" />
+    </l.WebPage>
+
+    <l.BlogPost
+      @title="Managing Flow and Rhythm with CSS Custom Properties"
+      @year="2018"
+      @month="12"
+      @day="7"
+      @url="https://24ways.org/2018/managing-flow-and-rhythm-with-css-custom-properties/"
+      as |r|
+    >
+      <r.Author @given="Andy" @family="Bell" />
+    </l.BlogPost>
+
     <l.Video
       @title="Making your app fast with high-performance components"
       @year="2015"
@@ -73,7 +121,13 @@
     >
       <r.Author @given="Devendra" @family="Desai" />
     </l.Video>
+  </References>
+</section>
 
+<section>
+  <h2>References (2)</h2>
+
+  <References class="references" as |l|>
     <l.Video
       @title="Building Better Components"
       @year="2019"
@@ -84,6 +138,16 @@
     >
       <r.Author @given="Dianne" @family="Eramo" />
     </l.Video>
+
+    <l.WebPage
+      @title="Accessible Rich Internet Applications (WAI-ARIA) 1.2"
+      @url="https://www.w3.org/TR/wai-aria-1.2/"
+      as |r|
+    >
+      <r.Author @given="Joanmarie" @family="Diggs" />
+      <r.Author @given="James" @family="Nurthen" />
+      <r.Author @given="Michael" @family="Cooper" />
+    </l.WebPage>
 
     <l.BlogPost
       @title="Atomic Design"
@@ -102,13 +166,6 @@
     >
       <r.Author @given="Brad" @family="Frost" />
     </l.BlogPost>
-  </References>
-</section>
-
-<section>
-  <h2>References (2)</h2>
-
-  <References class="references" as |l|>
 
     <l.Book
       @title="Design Patterns"
@@ -157,6 +214,25 @@
     >
       <r.Author @given="Ivan" @family="Montiel" />
     </l.BlogPost>
+
+    <l.WebPage
+      @title="BEM — Block Element Modifier"
+      @url="http://getbem.com/introduction/"
+      as |r|
+    >
+      <r.Author @given="Vsevolod" @family="Strukchinsky" />
+      <r.Author @given="Vlad" @family="Starkov" />
+    </l.WebPage>
+
+    <l.Book
+      @title="The Humane Interface"
+      @publisher="Addison-Wesley"
+      @year="2008"
+      @edition="10th Printing"
+      as |r|
+    >
+      <r.Author @given="Jef" @family="Raskin" />
+    </l.Book>
 
     <l.Video
       @title="Design-Patterns? Bloß nicht! // deutsch"
