@@ -38,7 +38,17 @@
     }
   }
 
-  .reveal li blockquote {
-    width: 90%;
+  .reveal {
+    li blockquote {
+      width: 90%;
+    }
+
+    blockquote cite {
+      display: block;
+    }
+
+    table td {
+      border-bottom: 0;
+    }
   }
 }

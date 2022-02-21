@@ -1,0 +1,209 @@
+<TitleSlide @title="Putting it into Practice" @subtitle="Where to start now?" />
+
+<section>
+  <div class="cols" data-cols="2">
+    <div class="r-stack">
+      <img src="bob.jpg" />
+
+      Bob
+    </div>
+    <div class="r-stack">
+      <img src="greta.jpg" />
+      Greta
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cols" data-cols="2">
+    <div>
+      Bob
+
+      <Code @name="practice/bob.hbs" />
+    </div>
+    <div>
+      Greta
+
+      <Code @name="practice/greta.hbs" />
+    </div>
+  </div>
+
+  <p>How would you approach it?</p>
+</section>
+
+<section>
+  <ComponentSpec>
+    <:signature>
+      <ul>
+        <li>Element</li>
+        <li>Arguments</li>
+        <li>Blocks</li>
+
+        <li><br />CSS Values</li>
+        <li>CSS Modes</li>
+        <li>CSS Parts</li>
+      </ul>
+    </:signature>
+
+    <:patterns>
+      <ul>
+        <li class="title">Creational</li>
+        <li><input type="checkbox" /> Factory</li>
+        <li><input type="checkbox" /> Prototype</li>
+        <li><input type="checkbox" /> Builder</li>
+
+        <li class="title">Structural</li>
+        <li><input type="checkbox" /> Decorator</li>
+        <li><input type="checkbox" /> Adapter</li>
+        <li><input type="checkbox" /> Bridge</li>
+        <li><input type="checkbox" /> Facade</li>
+
+        <li class="title">Behavioral</li>
+        <li><input type="checkbox" /> Command</li>
+        <li><input type="checkbox" /> Strategy</li>
+      </ul>
+    </:patterns>
+
+    <:haptics>
+      <ul>
+        <li><input type="checkbox" /> Style</li>
+        <li><input type="checkbox" /> Content</li>
+        <li><input type="checkbox" /> Structure</li>
+      </ul>
+    </:haptics>
+
+    <:types>
+      <ul>
+        <li><input type="radio" name="type" /> Presentational</li>
+        <li><input type="radio" name="type" /> Container</li>
+        <li><input type="radio" name="type" /> Provider</li>
+        <li><input type="radio" name="type" /> Composable</li>
+        <li><input type="radio" name="type" /> Data Entry</li>
+      </ul>
+    </:types>
+
+    <:classification>
+      <p>Your Map</p>
+    </:classification>
+  </ComponentSpec>
+</section>
+
+<section>
+  <p>What to do with Component Spec?</p>
+
+  <ul>
+    <li class="fragment">Slowly grow into muscle-memory - let it become your
+      bread-and-butter</li>
+    <li class="fragment">Relevant for writing AND reading code</li>
+    <li class="fragment">Use as documentation?</li>
+  </ul>
+
+  <Code @name="practice/documentation.js" class="fragment" />
+</section>
+
+<section>
+  <h3>Classification as a Starter</h3>
+
+  <ul>
+    <li>Make map(s) of your components, draw the landscape of your system</li>
+    <li>Draw areas to visualize boundaries</li>
+    <li>Derieve guides from those areas</li>
+  </ul>
+
+  <p>
+    <i class="fragment">It will have the most impact on your team</i>
+  </p>
+
+  <ul>
+    <li class="fragment">Eliminates avoidable discussions amongst peers</li>
+    <li class="fragment">Eliminates re-occuring decision findings, as already
+      provided by guides</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Real-World Example</h2>
+
+  <blockquote>Please implement feature X.<br />
+    Team B has worked on a very similar thing, so you can
+    <b>reuse</b>
+    the snowflake they've already built.</blockquote>
+</section>
+
+<section>
+  <h3>The Reusability Fatigue</h3>
+
+  <img src="itsatrap.jpg" class="fragment" />
+</section>
+
+<section>
+  <blockquote>
+    <p>"Oh, I only added
+      <b>two more arguments</b>
+      to their component, so I can use theirs"</p>
+
+    <cite class="fragment">- The Dev implementing the feature</cite>
+  </blockquote>
+</section>
+
+<section>
+  <div class="cols">
+    <img src="reuse-non-dev.jpg" />
+    <img src="reuse-dev.jpg" />
+  </div>
+
+  <p class="fragment">What is the dev seeing?</p>
+</section>
+
+<section>
+  <span class="attribution">Camba, M. (2015)</span>
+  <ul class="list-unstyled r-fit-text">
+    <li>L<span class="fragment" data-fragment-index="1">arge</span></li>
+    <li>M<span class="fragment" data-fragment-index="1">onolith with an</span></li>
+    <li>A<span class="fragment" data-fragment-index="1">rmy of</span></li>
+    <li>O<span class="fragment" data-fragment-index="1">ptions</span></li>
+  </ul>
+</section>
+
+<section>
+  <blockquote>
+    <p>"I left you 99 problems,<br />
+      but they ain't mine"</p>
+
+    <cite class="fragment">- The same Dev<br />leaving the company</cite>
+  </blockquote>
+
+  <p class="fragment">ok, jokes aside - let's solve this for real:</p>
+</section>
+
+<section>
+  <h3>Approaching Reusability</h3>
+  <ul>
+    <li class="fragment">Inspect the existing component:</li>
+    <li class="fragment">If it is a <i>recipe</i>, then all good</li>
+    <li class="fragment">If it is a <i>snowflake</i>, then:</li>
+    <li class="fragment">Extract a recipe component from this</li>
+    <li class="fragment">Let the existent use the recipe</li>
+    <li class="fragment">Your component to use the recipe, too</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Which Way?</h2>
+  <table>
+    <tbody>
+      <tr>
+        <td class="fragment">↖️</td>
+        <td>⬆️</td>
+        <td class="fragment">↗️</td>
+      </tr>
+      <tr>
+        <td class="fragment">⬅️</td>
+        <td></td>
+        <td class="fragment">➡️</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="fragment">Tell us about your Journey!</p>
+</section>

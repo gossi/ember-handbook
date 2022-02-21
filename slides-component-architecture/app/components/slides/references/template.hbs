@@ -189,6 +189,15 @@
     </l.BlogPost>
 
     <l.BlogPost
+      @title="The new responsive: Web design in a component-driven world"
+      @year="2021"
+      @url="https://web.dev/new-responsive/"
+      as |r|
+    >
+      <r.Author @given="Una" @family="Kravets" />
+    </l.BlogPost>
+
+    <l.BlogPost
       @title="Higher-Order Components in Ember.js"
       @year="2018"
       @url="https://v4.chriskrycho.com/2018/higher-order-components-in-emberjs.html"
@@ -206,6 +215,14 @@
       <r.Author @given="Maciej" @family="Kwaśniak" />
     </l.BlogPost>
 
+    <l.WebPage
+      @title="Loading • Pico.css"
+      @url="https://picocss.com/docs/loading.html"
+      as |r|
+    >
+      <r.Author @given="Lucas" @family="Larroche" />
+    </l.WebPage>
+
     <l.BlogPost
       @title="The Strategy Pattern Using Higher Order Functions"
       @year="2018"
@@ -214,7 +231,13 @@
     >
       <r.Author @given="Ivan" @family="Montiel" />
     </l.BlogPost>
+  </References>
+</section>
 
+<section>
+  <h2>References (3)</h2>
+
+  <References class="references" as |l|>
     <l.WebPage
       @title="BEM — Block Element Modifier"
       @url="http://getbem.com/introduction/"
@@ -223,6 +246,16 @@
       <r.Author @given="Vsevolod" @family="Strukchinsky" />
       <r.Author @given="Vlad" @family="Starkov" />
     </l.WebPage>
+
+    <l.BlogPost
+      @title="Compat 2021: Eliminating five top compatibility pain points on the web"
+      @year="2021"
+      @url="https://web.dev/compat2021/"
+      as |r|
+    >
+      <r.Author @given="Robert" @family="Nyman" />
+      <r.Author @given="Philip" @family="Jägenstedt" />
+    </l.BlogPost>
 
     <l.Book
       @title="The Humane Interface"
@@ -245,6 +278,24 @@
     </l.Video>
 
     <l.BlogPost
+      @title="CSS in 2022"
+      @year="2021"
+      @url="https://www.bram.us/2021/12/27/css-in-2022/"
+      as |r|
+    >
+      <r.Author @given="Bramus" @family="Van Damme" />
+    </l.BlogPost>
+
+    <l.BlogPost
+      @title="Interop 2022"
+      @year="2022"
+      @url="https://www.bram.us/2022/02/13/interop-2022/"
+      as |r|
+    >
+      <r.Author @given="Bramus" @family="Van Damme" />
+    </l.BlogPost>
+
+    <l.BlogPost
       @title="Custom properties with defaults: 3+1 strategies"
       @year="2021"
       @url="https://lea.verou.me/2021/10/custom-properties-with-defaults"
@@ -252,6 +303,5 @@
     >
       <r.Author @given="Lea" @family="Verou" />
     </l.BlogPost>
-
   </References>
 </section>
