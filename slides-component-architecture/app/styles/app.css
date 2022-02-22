@@ -50,5 +50,11 @@
     table td {
       border-bottom: 0;
     }
+
+    code {
+      background: #282c34;
+      border-radius: 0.2em;
+      opacity: 0.8;
+    }
   }
 }

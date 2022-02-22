@@ -25,10 +25,34 @@
 </section>
 
 <section>
+  <span class="attribution">Marcotte, E. (2010); Suzanne, M. (2022); Stoumann,
+    M. (2022)</span>
+  <h3>State of CSS</h3>
+
+  <h4>The Past (but still today?)</h4>
+
+  <p class="fragment">Responsive Webdesign (from 2010)</p>
+
+  <ul>
+    <li class="fragment">(ab)use of break-points for smaller screens</li>
+    <li class="fragment">Somehwat made popular through bootstrap</li>
+    <li class="fragment">"Best practices" and "methodologies" evolved (some to
+      avoid the cascade, rather than putting it to use)</li>
+    <li class="fragment"><code>!important</code>
+      - the symbol of resignation</li>
+    <li class="fragment">We write more CSS than we need to</li>
+    <li class="fragment">Solve styling in HTML/JS</li>
+  </ul>
+</section>
+
+<section>
   <span class="attribution">Nyman R., Jägenstedt P. (2021)<br />
     Van Damme, B. (2021, 2022)<br />
-    Kravets, U. (2021)</span>
+    Suzanne, M. (2021)<br />
+  </span>
   <h3>State of CSS</h3>
+
+  <h4>Today... and in the Future</h4>
 
   <ul>
     <li class="fragment">#compat2021 (<code>flexbox</code>,
@@ -38,13 +62,45 @@
       <code>transforms</code>)</li>
     <li class="fragment">#interop2022 (layers, containment, color, subgrid,
       <code>&lt;dialog&gt;</code>, ...)</li>
-    <li class="fragment">Biophilic Webdesign / New Responsive</li>
+    <li class="fragment">Biophilic Webdesign / New Responsive
+      <ul>
+        <li class="fragment">Embrace the platform</li>
+        <li class="fragment">Responsive to user preferences / viewport +
+          form-factor</li>
+        <li class="fragment">Layouting (intrinsic, macro, primitives)</li>
+        <li class="fragment">Solve styling in CSS</li>
+      </ul>
+    </li>
   </ul>
-  <br /><br />
+</section>
 
-  <h4 class="fragment">How we use CSS (in Ember)?</h4>
+<section>
+  <span class="attribution">Suzanne, M. (2021, 2022)</span>
+  <h3>Global vs Scoped CSS</h3>
 
-  <p class="fragment">Responsive Webdesign (from 2010)</p>
+  <ul>
+    <li>All CSS is global by default</li>
+    <li class="fragment">Scoping through shadow DOM</li>
+    <li class="fragment"><code>&lt;style scoped&gt;</code> attempt</li>
+    <li class="fragment">CSS WG looking into candidates (keywords: donut
+      scoping,
+      <code>@scope</code>)</li>
+    <li class="fragment">Scoping through build tools</li>
+  </ul>
+
+  <blockquote class="fragment">ember-css-modules</blockquote>
+
+  <div class="cols">
+    <div class="fragment">
+      <h4>Scoped Styles</h4>
+      <code>local-class</code>
+    </div>
+
+    <div class="fragment">
+      <h4>Global Styles</h4>
+      <code>class</code>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -80,8 +136,7 @@
     <li class="fragment">Rules and their values are
       <i>internal</i>
       to their component</li>
-    <li class="fragment">Processings of values is much likely possible (<code
-      >calc()</code>,
+    <li class="fragment">Processings of values is possible (<code>calc()</code>,
       <code>color()</code>)</li>
   </ul>
 
@@ -324,7 +379,8 @@
       <code>::--moz-progress-bar</code>,
       <code>::--webkit-progress-value</code>, ...)</li>
     <li class="fragment"><code>role</code></li>
-    <li class="fragment"><code>part</code></li>
+    <li class="fragment"><code>itemprop</code></li>
+    <li class="fragment"><code>part</code> (and <code>::part()</code>)</li>
   </ul>
 </section>
 

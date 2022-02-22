@@ -4,7 +4,7 @@ const StormTrooper = {
   }
 };
 
-const TiePilot = {
+const Heavy = {
   show(trooper) {
     console.log('tie pilot', trooper.number);
   }
@@ -12,8 +12,8 @@ const TiePilot = {
 
 function TrooperProfile(trooper) {
   let profile;
-  if (trooper.kind === 'tie-pilot') {
-    profile = Object.create(TiePilot);
+  if (trooper.weapon === 'heavy') {
+    profile = Object.create(Heavy);
   } else {
     profile = Object.create(StormTrooper);
   }

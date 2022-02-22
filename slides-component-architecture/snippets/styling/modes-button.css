@@ -1,5 +1,5 @@
 .button {
-  --_background: blue;
+  --_background: darkblue;
   background: var(--background, var(--_background));
 
   &[data-button-intent='alternative'] {

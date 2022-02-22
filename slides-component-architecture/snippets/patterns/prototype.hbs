@@ -1,8 +1,8 @@
 {{! definition: components/trooper-profile.hbs }}
 {{#let
   (if
-    (eq @trooper.kind "tie-pilot")
-    (component "trooper-profile/tie-pilot")
+    (eq @trooper.weapon "heavy")
+    (component "trooper-profile/heavy")
     (component "trooper-profile/storm-trooper")
   )
   as |Profile|

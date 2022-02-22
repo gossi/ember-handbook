@@ -1,4 +1,4 @@
 .button {
-  --button-background-color: blue;
+  --button-background-color: darkblue;
   background-color: var(--button-background-color);
 }
