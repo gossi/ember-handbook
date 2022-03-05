@@ -56,11 +56,11 @@ And the code for each file:
 </t.Tab>
 
 <t.Tab @label="label/template.hbs">
-<CodeSnippet @name="components/examples/toggle/label/template.hbs" />
+<CodeSnippet @name="components/examples/toggle/label/index.hbs" />
 </t.Tab>
 
 <t.Tab @label="switch/template.hbs">
-<CodeSnippet @name="components/examples/toggle/switch/template.hbs" />
+<CodeSnippet @name="components/examples/toggle/switch/index.hbs" />
 </t.Tab>
 </Tabs>
 

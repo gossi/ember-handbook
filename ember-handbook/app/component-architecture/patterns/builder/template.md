@@ -107,10 +107,10 @@ class CardDirector {
 ### Declarative Implementation
 
 A <LinkTo
-@route="component-architecture.types.contextual">contextual
+@route="component-architecture.types.composable">composable
 component</LinkTo> is best suited to implement the builder pattern
 declaratively. The yielded elements are pieces to construct different
-shapes of a particular type. The contextual component can act as a director
+shapes of a particular type. The composable component can act as a director
 itself with the _simple_ case being the default. The participants mentioned
 above are spread a bit differently and are as follows:
 
@@ -133,15 +133,15 @@ subsection [Using a Director](#using-a-director) below.
 
 <Tabs as |tabs|>
 <tabs.Page @title="template.hbs">
-<CodeSnippet @name="components/card/template.hbs" />
+<CodeSnippet @name="components/examples/card/template.hbs" />
 </tabs.Page>
 
 <tabs.Page @title="component.ts">
-<CodeSnippet @name="components/card/component.ts" />
+<CodeSnippet @name="components/examples/card/component.ts" />
 </tabs.Page>
 
 <tabs.Page @title="body/template.hbs">
-<CodeSnippet @name="components/card/body/template.hbs" />
+<CodeSnippet @name="components/examples/card/body/template.hbs" />
 </tabs.Page>
 </Tabs>
 
@@ -152,15 +152,15 @@ The simplest use-case (since it is a conceptual component, we give it
 a sensible default):
 
 <Demo @source="components/patterns/builder/demo-simplest.hbs">
-<Card>
+<Examples::Card>
 Simplest Card
-</Card>
+</Examples::Card>
 </Demo>
 
 Using the pieces from the builder:
 
 <Demo @source="components/patterns/builder/demo-dialog.hbs">
-<Card as |cb|>
+<Examples::Card as |cb|>
 <cb.Header>
 Header
 </cb.Header>
@@ -170,7 +170,7 @@ Card body
 <cb.Footer>
 Footer
 </cb.Footer>
-</Card>
+</Examples::Card>
 </Demo>
 
 The _Director_ is optional, since the `<Card>` is one itself (for the default case),
@@ -221,7 +221,7 @@ the product.
 
 - Use the builder pattern when you want to be able to create different shapes
   and representations.
-- Works in harmony with the <LinkTo @route="component-architecture.types.contextual">contextual
+- Works in harmony with the <LinkTo @route="component-architecture.types.composable">composable
   component</LinkTo>.
 - Nesting works smoothly on the declarative approach.
 - Easily extendable with more pieces.

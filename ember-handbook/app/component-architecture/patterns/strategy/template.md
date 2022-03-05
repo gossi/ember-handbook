@@ -52,11 +52,11 @@ arguments. To demonstrate this, typescript helps a lot:
 
 <Tabs as |tabs|>
 <tabs.Page @title="toggle/label/component.ts">
-<CodeSnippet @name="components/toggle/label/component.ts" />
+<CodeSnippet @name="components/examples/toggle/label/component.ts" />
 </tabs.Page>
 
 <tabs.Page @title="fancy-label/component.ts">
-<CodeSnippet @name="components/fancy-label/component.ts" />
+<CodeSnippet @name="components/examples/fancy-label/component.ts" />
 </tabs.Page>
 </Tabs>
 
@@ -72,7 +72,7 @@ label interchangeable. Here is how to invoke it:
 For components we usually provide a decent default, that's why this component
 can be used without a `@labelComponent` passed in but provides this option. More
 on this example can be found in the <LinkTo
-@route="component-architecture.types.contextual">contextual component type</LinkTo>.
+@route="component-architecture.types.composable">composable component type</LinkTo>.
 
 ### Combination of Both Ways
 
