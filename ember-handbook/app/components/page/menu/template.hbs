@@ -1,11 +1,38 @@
 <nav local-class="menu" {{did-insert this.setMenu}}>
   <div local-class="content">
-    {{yield (hash
-      Title=(component 'page/menu/title')
-      Chapter=(component 'page/menu/chapter')
-      Section=(component 'page/menu/section')
-      Subsection=(component 'page/menu/subsection')
-      Divider=(component 'page/menu/divider')
-    )}}
+    {{#let (unique-id) as |toggleId|}}
+      <input
+        data-toggle
+        data-nav
+        class="visually-hidden"
+        type="checkbox"
+        id={{toggleId}}
+      />
+      <label
+        local-class="toggle-label"
+        for={{toggleId}}
+        aria-label="toggle menu"
+        data-nav
+      >
+        <svg
+          width="18"
+          height="11"
+          viewBox="0 0 18 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M1 1L9 9L17 1" stroke-width="2"></path>
+        </svg>
+      </label>
+    {{/let}}
+    {{yield
+      (hash
+        Title=(component "page/menu/title")
+        Chapter=(component "page/menu/chapter")
+        Section=(component "page/menu/section")
+        Subsection=(component "page/menu/subsection")
+        Divider=(component "page/menu/divider")
+      )
+    }}
   </div>
 </nav>

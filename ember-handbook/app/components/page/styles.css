@@ -1,36 +1,18 @@
 .page {
-  display: flex;
-  padding-bottom: var(--s4);
+  display: grid;
+  grid-template-columns: 100%;
 
-  /* & > main {
-    width: 35rem;
-  } */
-}
-.page {
-  overflow: hidden;
-}
+  main {
+    padding: var(--s1);
+  }
 
-.page > * {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--s1) / 2 * -1);
-  margin-left: auto;
-  margin-right: auto;
-}
+  @media (--viewport-normal) {
+    & {
+      grid-template-columns: calc((100vw - var(--measure)) / 2) auto;
 
-.page > * > * {
-  margin: calc(var(--s1) / 2);
-  /* flex-grow: 1; */
-}
-
-.page > * > :last-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: calc(50% - var(--s1));
-}
-
-@media (max-width: 40rem) {
-  .page > * > :last-child {
-    min-width: unset;
+      main {
+        grid-column: 2 / 2;
+      }
+    }
   }
 }

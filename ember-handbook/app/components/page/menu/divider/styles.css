@@ -2,6 +2,9 @@
   display: block;
   border: 0;
   border-top: 1px solid var(--color-border);
-  margin-right: calc(var(--s1) * -1);
   margin-top: var(--s1);
+
+  @media (--viewport-normal) {
+    margin-right: calc(var(--s1) * -1);
+  }
 }

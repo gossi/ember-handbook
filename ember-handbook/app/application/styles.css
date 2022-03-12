@@ -1,5 +1,5 @@
 :root {
-  --page-header-height: calc(var(--s4) - 4px + var(--s1));
+  --page-header-height: calc(var(--s4) - 3px + var(--s1));
 }
 
 .header {
@@ -7,6 +7,7 @@
   top: 0;
   width: 100%;
   height: var(--page-header-height);
+  z-index: 1;
 
   display: flex;
   align-items: center;
@@ -17,6 +18,7 @@
 
   .brand {
     padding: var(--s1);
+    text-transform: uppercase;
   }
 
   a {
@@ -28,6 +30,79 @@
   a.active {
     background-color: var(--color-bg-alt2);
   }
+
+  nav {
+    position: absolute;
+    top: var(--page-header-height);
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    /* as menu */
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  [data-toggle]:checked ~ nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .icon {
+    padding: var(--s1);
+    cursor: pointer;
+
+    .line {
+      width: 30px;
+      height: 2px;
+      background-color: currentcolor;
+      display: block;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  [data-toggle]:checked ~ .icon {
+    .line:nth-child(2) {
+      opacity: 0;
+    }
+
+    .line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  @media (--viewport-normal) {
+    .icon,
+    [data-toggle] {
+      display: none;
+    }
+
+    nav {
+      position: unset;
+      width: auto;
+      opacity: 1;
+      pointer-events: auto;
+      flex-direction: row;
+
+      a {
+        display: inline-block;
+      }
+    }
+  }
 }
 
 .main {
@@ -37,3 +112,10 @@
 html {
   scroll-padding-top: calc(var(--page-header-height) + var(--s1));
 }
+
+/* :target::before {
+  content: "";
+  display: block;
+  height: calc(var(--header-height) + var(--s1)); /* fixed header height*
+  margin: calc((var(--header-height) * -1) + (var(--s1) * -1)) 0 0; /* negative fixed header height *
+} */

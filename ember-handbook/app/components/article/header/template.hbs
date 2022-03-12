@@ -1,21 +1,22 @@
 <header local-class="header" ...attributes>
-  <div>
-    <div class="text">
-      {{#if (has-block)}}
-        {{yield}}
-      {{else}}
-        <h1 itemprop="name headline" id="{{@slug}}">{{@title}}</h1>
-      {{/if}}
-    </div>
-
-    {{#if @toc}}
-      <nav local-class="toc">
-        <a href="#{{@slug}}" local-class="title">{{@title}}</a>
-
-        {{#each @toc as |heading|}}
-          <a href="#{{heading.slug}}" local-class="level-{{heading.lvl}}">{{heading.content}}</a>
-        {{/each}}
-      </nav>
+  <div class="text">
+    {{#if (has-block)}}
+      {{yield}}
+    {{else}}
+      <h1 itemprop="name headline" id="{{@slug}}">{{@title}}</h1>
     {{/if}}
   </div>
+
+  {{#if @toc}}
+    <nav local-class="toc">
+      <a href="#{{@slug}}" local-class="title">{{@title}}</a>
+
+      {{#each @toc as |heading|}}
+        <a
+          href="#{{heading.slug}}"
+          local-class="level-{{heading.lvl}}"
+        >{{heading.content}}</a>
+      {{/each}}
+    </nav>
+  {{/if}}
 </header>

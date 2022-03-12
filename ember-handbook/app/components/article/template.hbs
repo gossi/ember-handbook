@@ -1,29 +1,27 @@
-<article itemprop="mainContentOfPage" itemscope itemtype="https://schema.org/Article" local-class="article"
-  ...attributes>
-  {{!-- <div>
-    <div> --}}
+<article
+  itemprop="mainContentOfPage"
+  itemscope
+  itemtype="https://schema.org/Article"
+  ...attributes
+>
   {{#if (has-block-params)}}
-    {{yield (hash
-        Header=(component 'article/header' toc=this.toc title=this.title slug=this.slug)
-        Body=(component 'article/body')
-        Footer=(component 'article/footer')
-      )}}
+    {{yield
+      (hash
+        Header=(component
+          "article/header" toc=this.toc title=this.title slug=this.slug
+        )
+        Body=(component "article/body")
+        Footer=(component "article/footer")
+      )
+    }}
   {{else}}
-    <Article::Header @toc={{this.toc}} @title={{this.title}} @slug={{this.slug}} />
+    <Article::Header
+      @toc={{this.toc}}
+      @title={{this.title}}
+      @slug={{this.slug}}
+    />
     <Article::Body>
       {{yield}}
     </Article::Body>
   {{/if}}
-  {{!-- </div>
-
-    {{#if this.toc}}
-      <nav local-class="toc">
-        <p>Table of Contents</p>
-        <a href="#{{@slug}}" style="padding-left: var(--s1)">{{@title}}</a>
-        {{#each this.toc as |heading|}}
-          <a href="#{{heading.slug}}" style="padding-left: var(--s{{heading.lvl}})">{{heading.content}}</a>
-        {{/each}}
-      </nav>
-    {{/if}}
-  </div> --}}
 </article>

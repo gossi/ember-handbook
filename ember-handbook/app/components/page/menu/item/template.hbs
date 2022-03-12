@@ -1,7 +1,7 @@
 {{#if @route}}
-  <span local-class="item" ...attributes>
+  <span local-class="item" data-item ...attributes>
     <LinkTo @route={{@route}}>{{yield}}</LinkTo>
   </span>
 {{else}}
-  <span local-class="item" ...attributes>{{yield}}</span>
+  <span local-class="item" data-item ...attributes>{{yield}}</span>
 {{/if}}

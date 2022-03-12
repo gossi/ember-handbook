@@ -2,7 +2,6 @@
   --ratio: 1.3;
   --factor: 0.8;
 
-  /* --ratio: 1.4; */
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
   --s-3: calc(var(--s-2) / var(--ratio));
@@ -20,9 +19,11 @@
   --line-height-small: calc(0.8 * var(--ratio));
 
   line-height: var(--line-height);
-  /* font-size: calc(0.333vw + 1em); */
-  font-size: calc(0.5vw + 1em * var(--factor));
+  font-size: max(1em, calc(0.5vw + 1em * var(--factor)));
 }
+
+@custom-media --viewport-normal (min-width: calc(2 * 65ch + 15ch));
+@custom-media --viewport-wide (min-width: calc(3 * 65ch));
 
 @media (prefers-reduced-motion: no-preference) {
   :root {
@@ -72,24 +73,21 @@ main dd {
   padding-left: 2em;
 }
 
-:global {
-  /* main, */
-  .text {
-    & p + p,
-    & dd + dt {
-      margin-top: var(--s-1);
-    }
+:global .text {
+  /* max-width: var(--measure); */
 
-    & > * + * {
-      margin-top: var(--s2);
-    }
+  & p + p,
+  & dd + dt {
+    margin-top: var(--s-1);
+  }
 
-    & > * {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 35rem;
-    }
+  & > * + * {
+    margin-top: var(--s2);
+  }
+
+  & > * {
+    display: block;
+    max-width: var(--measure);
   }
 }
 
@@ -119,4 +117,14 @@ h3 {
 .t4,
 h4 {
   font-size: var(--s1);
+}
+
+:global .visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }

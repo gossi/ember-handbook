@@ -2,44 +2,48 @@
   overflow: hidden;
 }
 
-.header > * {
-  display: flex;
-  flex-wrap: wrap;
-  margin: calc(var(--s1) / 2 * -1);
-}
-
-.header > * > * {
-  margin: calc(var(--s1) / 2);
-  flex-grow: 1;
-}
-
-.header > * > :first-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-width: calc(35rem - var(--s1));
-  padding-top: var(--s1);
-  margin-bottom: var(--s1);
-}
-
-@media (max-width: 40rem) {
-  :global(.page-has-menu) .header > * > :first-child {
-    min-width: 100%;
-  }
-}
-
 .toc {
-  /* position: fixed;
-  margin-left: 35rem;
-  padding-left: var(--s1); */
+  background: var(--color-bg-alternative);
+  margin-block: var(--s-1);
+  padding: var(--s-2);
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--s-1);
 
   & > a {
     display: block;
-    margin-left: calc(var(--s1) * -1);
+    text-indent: calc(var(--s1) * -1);
     text-decoration: none;
-    margin-bottom: var(--s-1);
 
     &.title {
-      display: none;
+      font-size: 0;
+
+      &::before {
+        font-size: initial;
+        content: "Table of Contents";
+      }
+    }
+  }
+
+  /*
+   * Move toc out to the right and make it sticky. Actually, that's the wrong
+   * thing to do with a media query here :vomit:
+   *
+   * ...but I'm giving up
+   */
+  @media (--viewport-wide) {
+    position: fixed;
+    background: transparent;
+    margin-left: calc(var(--measure) + var(--s1));
+    margin-block: 0;
+    top: calc(var(--page-header-height) + var(--s1));
+
+    & > a.title {
+      font-size: initial;
+
+      &::before {
+        content: unset;
+      }
     }
   }
 }
@@ -73,7 +77,7 @@
   font-size: var(--s0);
 }
 
-@media (min-width: 40rem) {
+/* @media (min-width: 40rem) {
   :global(not(.page-has-menu)) .toc {
     margin-top: 1px;
     padding-top: var(--s1);
@@ -110,4 +114,4 @@
       display: block;
     }
   }
-}
+} */

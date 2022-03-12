@@ -1,7 +1,7 @@
 import { action } from "@ember/object";
 import Component from "@glimmer/component";
 
-import PageComponent from "ember-handbook/ui/components/page/component";
+import PageComponent from "../component";
 
 interface PageMenuArgs {
   page: PageComponent;
