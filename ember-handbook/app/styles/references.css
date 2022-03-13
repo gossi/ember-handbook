@@ -1,13 +1,11 @@
-:global {
-  .references {
-    padding-left: 0;
+:global .references {
+  padding-left: 0;
 
-    & > li {
-      list-style-type: none;
-      list-style-position: inside;
-      padding-left: 1em;
-      text-indent: -1em;
-      margin-bottom: var(--s-4);
-    }
+  & > li {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-bottom: var(--s-4);
   }
 }

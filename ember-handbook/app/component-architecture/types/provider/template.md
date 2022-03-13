@@ -1,12 +1,17 @@
 ---
-title: Provider Components
+title: Provider Component
 type: tech
 ---
 
 ## Synopsis
 
-<Haptics @element="block" @logic="yes" @styled="no" @content="no" @structure="no"
-@yields="yes" />
+<Haptics
+  @invocation="block"
+  @styled="no"
+  @content="no"
+  @structure="no"
+  @logic="yes"
+/>
 
 ## Principles
 
@@ -47,18 +52,37 @@ declarative but can also be a variable available to the template. The yielded
 ## References
 
 <References class="references" as |l|>
-<l.Video @title="Building Better Components" @year="2019" @medium="Video
-File" @series="EmberConf 2019" @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c" as |r|>
-<r.Author @given="Dianne" @family="Eramo" />
-</l.Video>
+  <l.Video
+    @title="Building Better Components"
+    @year="2019"
+    @medium="Video File"
+    @series="EmberConf 2019"
+    @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c"
+    as |r|
+  >
+    <r.Author @given="Dianne" @family="Eramo" />
+  </l.Video>
 
-<l.BlogPost @title="Container Components" @year="2015"
-@url="https://medium.com/@learnreact/container-components-c0e67432e005" as |r|>
-<r.Author @given="Michael" @family="Chan" />
-</l.BlogPost>
+  <l.Video
+    @title="Making your app fast with high-performance components"
+    @year="2015"
+    @medium="Video File"
+    @series="React.js Conf 2015"
+    @url="https://www.youtube.com/watch?v=KYzlpRvWZ6c&t=1351s"
+    as |r|
+  >
+    <r.Author @given="Jason" @family="Bonta" />
+  </l.Video>
 
-<l.Video @title="Design Considerations for a Modern Data Table" @year="2017" @medium="Video
-File" @series="Meetup: San Francisco" @url="https://www.youtube.com/watch?v=M6MHWgHjoJs" as |r|>
-<r.Author @given="Devendra" @family="Desai" />
-</l.Video>
+  {{! template-lint-disable no-potential-path-strings }}
+  <l.Video
+    @title="Design Considerations for a Modern Data Table"
+    @year="2017"
+    @medium="Video File"
+    @series="@Ember SF"
+    @url="https://www.youtube.com/watch?v=M6MHWgHjoJs"
+    as |r|
+  >
+    <r.Author @given="Devendra" @family="Desai" />
+  </l.Video>
 </References>

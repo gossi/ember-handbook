@@ -1,43 +1,43 @@
 ---
-title: Component Types
+title: Types
 type: tech
 ---
 
-Component Types indicate to a consumer _how to interact_ with them from the
-_outside_ and signal the _mechanics_ to plug and play
-them together.
+**Types** express a _common, repetitive_ use-case, which results in a given set
+of haptics and the possible _patterns_ it implements.
 
-## Overview
+<ul class="cards">
+  <li>
+    <h2><LinkTo @route="component-architecture.types.presentational">Presentational</LinkTo></h2>
+    <p>Make things looking good</p>
+  </li>
 
-Given that traits, there have been a few component types crystallized. The
-following table lists them and maps their characteristics to the explained traits.
+  <li>
+    <h2><LinkTo @route="component-architecture.types.container">Container</LinkTo></h2>
+    <p>An arbitrary grouping</p>
+  </li>
 
-<Haptics::Matrix @title="Name" as |Item|>
-<Item @logic="no" @styled="yes" @content="yes" @structure="no" @yields="no" @element="both">
-<LinkTo @route="component-architecture.types.presentational">Presentational</LinkTo>
-</Item>
-<Item @logic="no" @styled="no" @content="no" @structure="yes" @yields="optional" @element="block">
-<LinkTo @route="component-architecture.types.container">Container</LinkTo>
-</Item>
-<Item @logic="yes" @styled="no" @content="no" @structure="no" @yields="yes" @element="block">
-<LinkTo @route="component-architecture.types.provider">Provider</LinkTo>
-</Item>
+  <li>
+    <h2>
+      <LinkTo @route="component-architecture.types.provider">Provider</LinkTo>
+    </h2>
+    <p>Pure logic</p>
+  </li>
 
-<Item @logic="yes" @styled="optional" @content="optional" @structure="optional" @yields="optional" @element="both">
-<LinkTo @route="component-architecture.types.composable">Composable</LinkTo>
-</Item>
+  <li>
+    <h2>
+      <LinkTo @route="component-architecture.types.composable">Composable</LinkTo>
+    </h2>
+    <p>Connecting things</p>
+  </li>
 
-<Item @logic="yes" @styled="yes" @content="yes" @structure="yes" @yields="no" @element="inline">
-Functional Unit
-</Item>
-
-<Item @logic="yes" @styled="no" @content="optional" @structure="yes" @yields="yes" @element="block">
-<LinkTo @route="component-architecture.types.data-entry">Harvester</LinkTo>
-</Item>
-<Item @logic="no" @styled="no" @content="no" @structure="no" @yields="no" @element="inline">
-&amp; <LinkTo @route="component-architecture.types.data-entry">Feeder</LinkTo>
-</Item>
-</Haptics::Matrix>
+  <li>
+    <h2>
+      <LinkTo @route="component-architecture.types.data-entry">Data Entry</LinkTo>
+    </h2>
+    <p>Data collection and presentation</p>
+  </li>
+</ul>
 
 ## References
 

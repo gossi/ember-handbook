@@ -6,6 +6,14 @@
 
     <m.Chapter @route="component-architecture.haptics">Haptics</m.Chapter>
 
+    <m.Section
+      @route="component-architecture.haptics.invocation"
+    >Invocation</m.Section>
+    <m.Section
+      @route="component-architecture.haptics.plug-and-play"
+    >Plug'n'Play</m.Section>
+    <m.Section @route="component-architecture.haptics.blocks">Blocks</m.Section>
+
     <m.Divider />
 
     <m.Chapter @route="component-architecture.patterns">Patterns</m.Chapter>
@@ -25,19 +33,21 @@
     <m.Section
       @route="component-architecture.patterns.decorator"
     >Decorator</m.Section>
-    <m.Section @route="component-architecture.patterns.proxy">Proxy</m.Section>
     <m.Section
       @route="component-architecture.patterns.adapter"
     >Adapter</m.Section>
     <m.Section
-      @route="component-architecture.patterns.composite"
-    >Composite</m.Section>
+      @route="component-architecture.patterns.bridge"
+    >Bridge</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.facade"
+    >Facade</m.Section>
 
     <span local-class="spacer"></span>
 
     <m.Section
-      @route="component-architecture.patterns.flyweight"
-    >Flyweight</m.Section>
+      @route="component-architecture.patterns.command"
+    >Command</m.Section>
     <m.Section
       @route="component-architecture.patterns.strategy"
     >Strategy</m.Section>
@@ -67,21 +77,16 @@
       @route="component-architecture.classification"
     >Classification</m.Chapter>
 
-    <m.Divider />
-
-    <m.Chapter
-      @route="component-architecture.specialization"
-    >Specialization</m.Chapter>
-    <m.Section
-      @route="component-architecture.specialization.inheritance"
-    >Inheritance</m.Section>
-    <m.Section
-      @route="component-architecture.specialization.composition"
-    >Composition</m.Section>
-
-    <m.Divider />
+    <m.Chapter @route="component-architecture.styling">Styling</m.Chapter>
 
     <m.Chapter @route="component-architecture.best-practices">Best Practices</m.Chapter>
+
+    <m.Divider />
+
+    <m.Chapter>Appendix</m.Chapter>
+
+    <m.Section @route="component-architecture.glossary">Glossary</m.Section>
+    <m.Section @route="component-architecture.literature">Literature</m.Section>
 
     <span local-class="spacer"></span>
   </p.Menu>

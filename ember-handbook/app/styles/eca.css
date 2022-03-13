@@ -48,3 +48,9 @@ code {
 dt {
   font-weight: bold;
 }
+
+blockquote {
+  border-left: 2px solid var(--color-border);
+  background-color: var(--color-bg-alternative);
+  padding: var(--s1);
+}

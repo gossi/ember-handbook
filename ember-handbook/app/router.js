@@ -9,7 +9,11 @@ const Router = EmberRouter.extend({
 
 Router.map(function () {
   this.route('component-architecture', function () {
-    this.route('haptics');
+    this.route('haptics', function () {
+      this.route('invocation');
+      this.route('plug-and-play');
+      this.route('blocks');
+    });
     this.route('types', function () {
       this.route('presentational');
       this.route('container');
@@ -23,19 +27,18 @@ Router.map(function () {
       this.route('builder');
 
       this.route('decorator');
-      this.route('proxy');
       this.route('adapter');
-      this.route('composite');
+      this.route('bridge');
+      this.route('facade');;
 
-      this.route('flyweight');
+      this.route('command');
       this.route('strategy');
     });
+    this.route('styling');
     this.route('classification');
-    this.route('specialization', function () {
-      this.route('inheritance');
-      this.route('composition');
-    });
+    this.route('glossary');
     this.route('best-practices');
+    this.route('literature');
   });
 });
 

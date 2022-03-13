@@ -73,24 +73,6 @@ main dd {
   padding-left: 2em;
 }
 
-:global .text {
-  /* max-width: var(--measure); */
-
-  & p + p,
-  & dd + dt {
-    margin-top: var(--s-1);
-  }
-
-  & > * + * {
-    margin-top: var(--s2);
-  }
-
-  & > * {
-    display: block;
-    max-width: var(--measure);
-  }
-}
-
 h1,
 h2,
 h3,
@@ -117,14 +99,4 @@ h3 {
 .t4,
 h4 {
   font-size: var(--s1);
-}
-
-:global .visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
 }

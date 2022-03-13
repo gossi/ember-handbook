@@ -1,11 +1,17 @@
 ---
-title: Presentational Components
+title: Presentational Component
 type: tech
 ---
 
 ## Synopsis
 
-<Haptics @element="both" @logic="no" @styled="yes" @content="yes" @structure="no" @yields="no" />
+<Haptics
+  @invocation="both"
+  @styled="yes"
+  @content="yes"
+  @structure="no"
+  @logic="no"
+/>
 
 ## Principles
 
@@ -27,13 +33,13 @@ The example is an avatar component that takes an url to an image as argument and
 presents it in a circle with a border.
 
 <Tabs as |t|>
-<t.Tab @label="template.hbs">
-<CodeSnippet @name="components/examples/avatar/template.hbs" />
-</t.Tab>
+  <t.Tab @label="template.hbs">
+    <CodeSnippet @name="components/examples/avatar/template.hbs" />
+  </t.Tab>
 
-<t.Tab @label="styles.css">
-<CodeSnippet @name="components/examples/avatar/styles.css" />
-</t.Tab>
+  <t.Tab @label="styles.css">
+    <CodeSnippet @name="components/examples/avatar/styles.css" />
+  </t.Tab>
 </Tabs>
 
 ### Usage
@@ -45,18 +51,41 @@ Invoke the component with and pass down explicitely the arguments it needs to re
 ## References
 
 <References class="references" as |l|>
-<l.BlogPost @title="Presentational and Container Components" @year="2015"
-@url="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0" as |r|>
-<r.Author @given="Dan" @family="Abramov" />
-</l.BlogPost>
+  <l.BlogPost
+    @title="Presentational and Container Components"
+    @year="2015"
+    @url="https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0"
+    as |r|
+  >
+    <r.Author @given="Dan" @family="Abramov" />
+  </l.BlogPost>
 
-<l.Video @title="Building Better Components" @year="2019" @medium="Video
-File" @series="EmberConf 2019" @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c" as |r|>
-<r.Author @given="Dianne" @family="Eramo" />
-</l.Video>
+  <l.Video
+    @title="Building Better Components"
+    @year="2019"
+    @medium="Video File"
+    @series="EmberConf 2019"
+    @url="https://www.youtube.com/watch?v=Kyd2mQpR_9c"
+    as |r|
+  >
+    <r.Author @given="Dianne" @family="Eramo" />
+  </l.Video>
 
-<l.BlogPost @title="Introducing the Single Element Pattern" @year="2018"
-@url="https://www.freecodecamp.org/news/introducing-the-single-element-pattern-dfbd2c295c5d/" as |r|>
-<r.Author @given="Diego" @family="Haz" />
-</l.BlogPost>
+  <l.BlogPost
+    @title="Introducing the Single Element Pattern"
+    @year="2018"
+    @url="https://www.freecodecamp.org/news/introducing-the-single-element-pattern-dfbd2c295c5d/"
+    as |r|
+  >
+    <r.Author @given="Diego" @family="Haz" />
+  </l.BlogPost>
+
+  <l.BlogPost
+    @title="Components patterns in Ember.js"
+    @year="2018"
+    @url="https://medium.com/macsour/components-patterns-in-ember-js-5e6fc6eea28f"
+    as |r|
+  >
+    <r.Author @given="Maciej" @family="Kwaśniak" />
+  </l.BlogPost>
 </References>

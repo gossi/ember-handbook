@@ -3,38 +3,43 @@ title: Data Entry Components
 type: tech
 ---
 
-Harvester & feeder are a nice tandem to enter and collect data in a declarative way.
+Collector & entry are a nice tandem to enter and collect data in a declarative way.
 
 ## Synopsis
 
 <Haptics::Matrix as |Item|>
-<Item @logic="yes" @styled="no" @content="optional" @structure="yes" @yields="yes" @element="block">
-Collector
-</Item>
-<Item @logic="no" @styled="no" @content="no" @structure="no" @yields="no" @element="inline">
-Entry
-</Item>
+  <Item
+    @invocation="block"
+    @styled="yes"
+    @content="yes"
+    @structure="yes"
+    @logic="yes"
+  >
+    Collector
+  </Item>
+  <Item
+    @invocation="inline"
+    @styled="no"
+    @content="no"
+    @structure="no"
+    @logic="no"
+  >
+    Entry
+  </Item>
 </Haptics::Matrix>
 
 ## Principles
 
-- Harvester is a collector of data.
-- Harvester yields feeder components.
-- Feeder are components for data input.
-- Data input the declarative way.
-- Harvester can yield the data or display them.
-- Data up instead of down.
+- Collector acquires data
+- Collector yields entry components
+- Entry component for declarative data input
+- Collector can yield and/or display data
+- Data up instead of down
 
 ## Example
 
-To demontrate this a component that wraps the network of
-[visjs.org](https://visjs.org) will be used to draw a
-sitemap of this section.
-
-### VisNetwork Component
-
-The `<VisNetwork>` component is the harvester component and yields `<Node>` and
-`<Edge>` as feeder components for data input.
+The `<LeafletMap>` by `ember-leaflet` addon is a very nice example of a data entry
+component type.
 
 ### Usage
 
