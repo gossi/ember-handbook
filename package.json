@@ -5,8 +5,8 @@
     "slides-component-architecture"
   ],
   "scripts": {
-    "build:website": "cd ember-handbook && yarn build",
-    "build:slides": "cd slides-component-architecture && yarn build"
+    "build:website": "cd ember-handbook && yarn build -prod",
+    "build:slides": "cd slides-component-architecture && yarn build -prod"
   },
   "private": true
 }
