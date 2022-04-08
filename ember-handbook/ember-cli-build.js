@@ -136,8 +136,6 @@ module.exports = function (defaults) {
           }
         }
 
-        console.log(urls);
-
         return urls;
       }
     }
