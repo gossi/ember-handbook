@@ -7,5 +7,6 @@ const browsers = [
 ];
 
 module.exports = {
-  browsers
+  browsers,
+  node: 'current'
 };

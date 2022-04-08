@@ -123,21 +123,24 @@ module.exports = function (defaults) {
       }
     },
 
-    // prember: {
-    //   urls() {
-    //     const routes = walkSync('app/ui', {
-    //       ignore: ['application', 'components']
-    //     });
-    //     const urls = ['/'];
-    //     for (const file of routes) {
-    //       if (file.endsWith('/') && !file.endsWith('index/')) {
-    //         urls.push(`/${file}`);
-    //       }
-    //     }
+    prember: {
+      urls() {
+        const routes = walkSync('app', {
+          ignore: ['application', 'components', 'templates', 'styles']
+        });
+        const urls = ['/'];
 
-    //     return urls;
-    //   }
-    // }
+        for (const file of routes) {
+          if (file.endsWith('/') && !file.endsWith('index/')) {
+            urls.push(`/${file}`);
+          }
+        }
+
+        console.log(urls);
+
+        return urls;
+      }
+    }
   });
 
   // app.import('node_modules/highlight.js/styles/zenburn.css');
