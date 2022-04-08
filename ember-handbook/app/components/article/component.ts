@@ -32,7 +32,7 @@ export default class ArticleLayoutBasicComponent extends Component<
   }
 
   get slug(): string {
-    return slugify(this.title, { lower: true });
+    return this.title ? slugify(this.title, { lower: true }) : '';
   }
 
   get toc(): object {

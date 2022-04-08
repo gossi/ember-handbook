@@ -40,6 +40,20 @@ Router.map(function () {
     this.route('best-practices');
     this.route('literature');
   });
+
+  this.route('ui-patterns', function () {
+    this.route('general-considerations', function () {
+      this.route('considering-forms');
+      this.route('use-of-aria-live');
+    });
+    this.route('form-components', function () {
+      this.route('checkboxes', function () {
+        this.route('anti-patterns');
+        this.route('styling');
+      });
+    });
+    this.route('faqs');
+  })
 });
 
 export default Router;
