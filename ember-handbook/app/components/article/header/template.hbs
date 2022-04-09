@@ -3,6 +3,7 @@
     {{#if (has-block)}}
       {{yield}}
     {{else}}
+      {{page-title @title}}
       <h1 itemprop="name headline" id="{{@slug}}">{{@title}}</h1>
     {{/if}}
   </div>
