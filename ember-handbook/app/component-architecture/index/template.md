@@ -7,6 +7,8 @@ ingredients to a component architecture. The demos and examples are written
 in ember, yet this whole section is framework agnostic and can also be applied
 to any other frontend framework or library that provides components.
 
+This topic was presented as a talk on EmberIgnite. You can <LinkTo @route="component-architecture.talk">re-watch the recording</LinkTo>.
+
 <ul class="cards">
   <li>
     <h2><LinkTo @route="component-architecture.haptics">Haptics</LinkTo></h2>

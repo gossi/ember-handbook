@@ -9,6 +9,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function () {
   this.route('component-architecture', function () {
+    this.route('talk');
     this.route('haptics', function () {
       this.route('invocation');
       this.route('plug-and-play');
