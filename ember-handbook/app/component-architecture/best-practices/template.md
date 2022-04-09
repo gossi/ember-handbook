@@ -4,6 +4,20 @@ title: Best Practices
 
 Best practices for developing components.
 
+## Classification as a Starter
+
+Having proper guidelines where to put your components will have the most impact
+on your team. It will
+
+- eliminate avoidable discussions amongst peers
+- eliminate re-occuring decision findings, as already provided by guides
+
+in order to ramp up, here is a three-step guide to reach for your <LinkTo @route="component-architecture.classification">classification</LinkTo>:
+
+1. Make map(s) of your components, draw the landscape of your system
+2. Draw areas to visualize boundaries
+3. Derieve guides from those areas
+
 ## Construction Components
 
 Start with construction components.

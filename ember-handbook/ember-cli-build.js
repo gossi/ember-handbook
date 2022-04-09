@@ -3,6 +3,7 @@
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 const deflate = require('markdown-it-plantuml/lib/deflate');
 const walkSync = require('walk-sync');
+const customBlock = require('markdown-it-custom-block');
 
 const PLANTUML_SKIN = `
 skinparam defaultFontName Segoe UI
@@ -100,6 +101,17 @@ module.exports = function (defaults) {
         'markdown-it-sub',
         'markdown-it-sup'
       ],
+      configure(md) {
+        md.use(customBlock, {
+          figma(url) {
+            return `<iframe
+              style="width: 100%; min-height: 400px; resize: both;"
+              src="https://www.figma.com/embed?embed_host=share&url=${url}"
+              allowfullscreen
+            />`;
+          }
+        });
+      },
       format(content) {
         let body = content.html;
         let footer = '';

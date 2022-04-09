@@ -14,6 +14,22 @@
     display: block;
     max-width: var(--measure);
   }
+
+  img {
+    max-width: min(var(--measure), 100%);
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    counter-increment: figure;
+
+    figcaption::before {
+      content: "Figure " counter(figure) ": ";
+    }
+  }
 }
 
 :global .cards {
