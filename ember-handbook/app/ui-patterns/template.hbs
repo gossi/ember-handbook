@@ -1,0 +1,124 @@
+<Page as |p|>
+  <p.Menu as |m|>
+    <m.Title @route="ui-patterns.index">
+      UI Patterns
+    </m.Title>
+
+    <m.Chapter>General Considerations</m.Chapter>
+
+    <m.Section
+      @route="ui-patterns.general-considerations.considering-forms"
+    >Considering Forms</m.Section>
+    <m.Section @route="ui-patterns.general-considerations.use-of-aria-live">Use
+      of aria-live</m.Section>
+
+    <m.Chapter>Form Components</m.Chapter>
+
+    <m.Section
+      @route="ui-patterns.form-components.checkboxes.index"
+    >Checkboxes</m.Section>
+    <m.Subsection
+      @route="ui-patterns.form-components.checkboxes.anti-patterns"
+    >Anti-Patterns</m.Subsection>
+    <m.Subsection
+      @route="ui-patterns.form-components.checkboxes.styling"
+    >Styling</m.Subsection>
+
+    <m.Divider />
+
+    <m.Chapter>Appendix</m.Chapter>
+
+    <m.Section @route="ui-patterns.faqs">FAQs</m.Section>
+
+    {{!
+    <m.Chapter @route="component-architecture.haptics">Haptics</m.Chapter>
+
+    <m.Section
+      @route="component-architecture.haptics.invocation"
+    >Invocation</m.Section>
+    <m.Section
+      @route="component-architecture.haptics.plug-and-play"
+    >Plug'n'Play</m.Section>
+    <m.Section @route="component-architecture.haptics.blocks">Blocks</m.Section>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.patterns">Patterns</m.Chapter>
+
+    <m.Section
+      @route="component-architecture.patterns.factory"
+    >Factory</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.prototype"
+    >Prototype</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.builder"
+    >Builder</m.Section>
+
+    <span local-class="spacer"></span>
+
+    <m.Section
+      @route="component-architecture.patterns.decorator"
+    >Decorator</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.adapter"
+    >Adapter</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.bridge"
+    >Bridge</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.facade"
+    >Facade</m.Section>
+
+    <span local-class="spacer"></span>
+
+    <m.Section
+      @route="component-architecture.patterns.command"
+    >Command</m.Section>
+    <m.Section
+      @route="component-architecture.patterns.strategy"
+    >Strategy</m.Section>
+
+    <m.Divider />
+
+    <m.Chapter @route="component-architecture.types">Types</m.Chapter>
+    <m.Section
+      @route="component-architecture.types.presentational"
+    >Presentational</m.Section>
+    <m.Section
+      @route="component-architecture.types.container"
+    >Container</m.Section>
+    <m.Section
+      @route="component-architecture.types.provider"
+    >Provider</m.Section>
+    <m.Section
+      @route="component-architecture.types.composable"
+    >Composable</m.Section>
+    <m.Section @route="component-architecture.types.data-entry">
+      Data Entry
+    </m.Section>
+
+    <m.Divider />
+
+    <m.Chapter
+      @route="component-architecture.classification"
+    >Classification</m.Chapter>
+
+    <m.Chapter @route="component-architecture.styling">Styling</m.Chapter>
+
+    <m.Chapter @route="component-architecture.best-practices">Best Practices</m.Chapter>
+
+    <m.Divider />
+
+    <m.Chapter>Appendix</m.Chapter>
+
+    <m.Section @route="component-architecture.glossary">Glossary</m.Section>
+    <m.Section @route="component-architecture.literature">Literature</m.Section>
+
+    <span local-class="spacer"></span> }}
+  </p.Menu>
+
+  <p.Main>
+    {{outlet}}
+  </p.Main>
+</Page>

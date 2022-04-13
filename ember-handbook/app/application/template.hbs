@@ -20,6 +20,16 @@
         Component Architecture
       </a>
     {{/let}}
+
+    {{#let (link "ui-patterns") as |link|}}
+      <a
+        href={{link.url}}
+        local-class={{if link.isActive "active"}}
+        {{on "click" link.transitionTo}}
+      >
+        UI Patterns
+      </a>
+    {{/let}}
   </nav>
 </header>
 
